@@ -1,4 +1,4 @@
-Inquisite-Core
+flask-api-bootstrap
 ==============
 
-Inquisite core services
+RESTFUL API starter script with JWT authentication and cross domain support.
