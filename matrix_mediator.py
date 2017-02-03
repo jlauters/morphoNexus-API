@@ -7,7 +7,8 @@ class matrixMediator:
   matrixHandler = None
 
   def __init__(self, input_file):
-    self.detectHandler(input_file)
+    #self.detectHandler(input_file)
+    pass 
 
   def detectHandler(self, input_file):
   
@@ -18,12 +19,18 @@ class matrixMediator:
 
       if ".nex" == file_extension:
         self.matrixHandler = NexusHandler(input_file)
+        output_file = self.matrixHandler.read_file()
+        return output_file
 
       elif ".xlsx" == file_extension or ".xls" == file_extension:
         self.matrixHandler = XlsHandler(input_file)
+        output_file = self.matrixHandler.read_file()
+        return output_file
 
       elif ".txt" == file_extension:
         self.matrixHandler = TxtHandler(input_file)
+        output_file = self.matrixHandler.read_file()
+        return output_file
 
       else:
         print "unknown filetype found."

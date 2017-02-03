@@ -17,7 +17,6 @@ class TxtHandler():
 
   def __init__(self, input_file):
     self.input_file = input_file
-    self.read_file()
 
   def read_file(self):
   
@@ -146,23 +145,27 @@ class TxtHandler():
           nw.add(taxon_name, char_no, cv)
 
 
+      # keep the upload path and filename, but change extension
+      file_parts = self.input_file.split('.')
+      output_file = file_parts[0] + '.nex'
 
-      nw.write_to_file(filename= xread_filename + '.nex', interleave=False, charblock=False)
+      nw.write_to_file(filename=output_file, interleave=False, charblock=True)
 
       # move to nexus folder
-      os.rename(xread_filename + ".nex", "./nexus/" + xread_filename + ".nex")
+      #os.rename(xread_filename + ".nex", "./nexus/" + xread_filename + ".nex")
 
       # wait for file to move before open and append
-      while not os.path.exists('./nexus/' + xread_filename + '.nex'):
-        time.sleep(1)
+      #while not os.path.exists('./nexus/' + xread_filename + '.nex'):
+      #  time.sleep(1)
  
-      if os.path.isfile('./nexus/' + xread_filename + '.nex'):
+      #if os.path.isfile('./nexus/' + xread_filename + '.nex'):
 
-        # Custom Block Section
-        nexus_file = codecs.open('./nexus/' + xread_filename + '.nex', 'a', 'utf-8')
-        nexus_file.write(custom_block)
-        nexus_file.close()      
+      # Custom Block Section
+      nexus_file = codecs.open(output_file, 'a', 'utf-8')
+      nexus_file.write(custom_block)
+      nexus_file.close()      
 
+      return output_file
 
     else:
       print "do not know how to process this .txt file"

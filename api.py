@@ -109,11 +109,13 @@ def parse_matrix():
     upload_file = os.path.join(app.config['UPLOAD_FOLDER'], filename)
     input_file.save( upload_file )
 
-    mediator = matrixMediator( upload_file )
+    mediator  = matrixMediator( upload_file )
+    output_file = mediator.detectHandler( upload_file )
+    matrix_url = request.url_root + 'uploads/' + os.path.basename(output_file)
 
     resp = (("status", "ok"),
-            ("msg", "File is being processed"),
-            ("matrix_url", request.url_root + "uploads/" + filename))
+            ("msg", "File was processed!"),
+            ("matrix_url", matrix_url))
 
   resp = collections.OrderedDict(resp)
   return Response(response=json.dumps(resp), status=200, mimetype="application/json")

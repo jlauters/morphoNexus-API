@@ -13,7 +13,6 @@ class NexusHandler():
 
   def __init__(self, input_file):
     self.input_file = input_file
-    self.read_file()
 
   def read_file(self):
 
@@ -73,8 +72,13 @@ class NexusHandler():
 
     self.custom_block = custom_block
 
+    # keep the upload path and filename, but change extension
+    file_parts = self.input_file.split('.')
+    output_file = file_parts[0] + '.nex'
+
     ### Simple Append to end of file ####
-    nexus_file = codecs.open(self.input_file, 'a', 'utf-8')
+    nexus_file = codecs.open(output_file, 'a', 'utf-8')
     nexus_file.write(self.custom_block)
     nexus_file.close()
 
+    return output_file

@@ -13,11 +13,10 @@ class XlsHandler():
 
   def __init__(self, input_file):
     self.input_file = input_file
-    self.read_file()
 
   def read_file(self):
 
-    book = xlrd.open_workbook(input_file)
+    book = xlrd.open_workbook(self.input_file)
     sh = book.sheet_by_index(0)
 
     nw = NexusWriter()
@@ -66,11 +65,15 @@ class XlsHandler():
 
     self.custom_block = custom_block
 
-    nw.write_to_file(filename='output.nex', interleave=False, charblock=False)
+    # keep the upload path and filename, but change extension
+    file_parts = self.input_file.split('.')
+    output_file = file_parts[0] + '.nex'
+    nw.write_to_file(filename=file_parts[0] + '.nex', interleave=False, charblock=True)
 
     ## quick append Custom Block 
-    nexus_file = open('output.nex', 'a')
+    nexus_file = open(output_file, 'a')
     nexus_file.write(custom_block)
     nexus_file.close()
 
+    return output_file
 
