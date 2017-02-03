@@ -1,0 +1,755 @@
+#NEXUS
+
+BEGIN TAXA;
+	DIMENSIONS NTAX=56;
+	TAXLABELS
+		Nyctomys_sumichrasti
+		Peromyscus_maniculatus
+		Delomys_sublineatus
+		Thomasomys_baeops
+		Wiedomys_pyrrhorhinos
+		Aegialomys_xanthaeolus
+		Amphinectomys_savamis
+		Cerradomys_subflavus
+		Eremoryzomys_polius
+		Euryoryzomys_lamia
+		Euryoryzomys_macconnelli
+		Euryoryzomys_russatus
+		Handleyomys_alfaroi
+		Handleyomys_chapmani
+		Handleyomys_intectus
+		Handleyomys_rostratus
+		Holochilus_brasiliensis
+		Hylaeamys_megacephalus
+		Hylaeamys_yunganus
+		Lundomys_molitor
+		Melanomys_caliginosus
+		Microryzomys_minutus
+		Mindomys_hammondi
+		Neacomys_minutus
+		Neacomys_musseri
+		Neacomys_spinosus
+		Nectomys_apicalis
+		Nectomys_squamipes
+		Nephelomys_albigularis
+		Nephelomys_levipes
+		Nesoryzomys_narboroughi
+		Nesoryzomys_swarthi
+		Oecomys_bicolor
+		Oecomys_catherinae
+		Oecomys_concolor
+		Oecomys_mamorae
+		Oecomys_trinitatis
+		Oligoryzomys_flavescens
+		Oligoryzomys_fornesi
+		Oligoryzomys_fulvescens
+		Oligoryzomys_nigripes
+		Oligoryzomys_stramineus
+		Oreoryzomys_balneator
+		Oryzomys_couesi
+		Oryzomys_palustris
+		Pseudoryzomys_simplex
+		Scolomys_ucayalensis
+		Sigmodontomys_alfari
+		Sigmodontomys_aphrastus
+		Sooretamys_angouya
+		Transandinomys_talamancae
+		Zygodontomys_brevicauda
+		Zygodontomys_cherriei
+		Oryzomys_curasoae
+		Oryzomys_gorgasi
+	;
+ENDBLOCK;
+
+BEGIN CHARACTERS;
+	dimensions nchar=1367;																																																																																															
+	format datatype=dna symbols="0123456" missing=? gap=- interleave;			
+
+	CHARLABELS
+		 [1] 'Mammae_-_mammae_number_and_position'
+		 [2] 'Manus_-_claws_size_and_shape'
+		 [3] 'Manus_-_ungual_tufts_presence'
+		 [4] 'Hindfeet_-_Hypothenar_pad_presence'
+		 [5] 'Hindfeet_-_plantar_pads_size_and_position'
+		 [6] 'Hindfeet_-_Plantar_surface_texture'
+		 [7] 'Hindfeet_-_Ungual_tufts_presense'
+		 [8] 'Hindfeet_-_Natatory_fringes_presence'
+		 [9] 'Hindfeet_-_Interdigital_webbing_presence_and_size'
+		 [10] 'Hindfeet_-_Dorsal_surface_hair_color'
+		 [11] 'Tail_-_Ventral_surface_hairs_color'
+		 [12] 'Tail_-_Fur_presence'
+		 [13] 'Pelage_-_Spines_presence'
+		 [14] 'Pelage_-_Ventral_fur_base_color'
+		 [15] 'Pelage_-_Countershading_presence'
+		 [16] 'Pelage_-_Subauricular_patches_presence'
+		 [17] 'Rostrum_-_Rostral_tube_presence'
+		 [18] 'Rostrum-_Nasals_posterior_terminus_shape'
+		 [19] 'Rostrum_-_Nasals_extension'
+		 [20] 'Rostrum_-_Premaxillaries_extension'
+		 [21] 'Rostrum_-_Lacrimal_sutures'
+		 [22] 'Orbital_region_-_Interorbital_region_shape'
+		 [23] 'Orbital_region_-_Postorbital_ridge_presence'
+		 [24] 'Braincase_-_Frontosquamosal_suture_colinearity'
+		 [25] 'Braincase_-_Parietals_lateral_expansion'
+		 [26] 'Braincase_-_Interparietal_shape'
+		 [27] 'Braincase_-_Basicranial_flexion_extent'
+		 [28] 'Zygomata_-_Zygomatic_plate_anterior_shape'
+		 [29] 'Zygomata_-_Posterior_margin_of_zygomatic_plate_position'
+		 [30] 'Zygomata_-_Jugal_presence_and_size'
+		 [31] 'Palate_-_Incisive_foramina_extension'
+		 [32] 'Palate_-_Palate_posterior_extension'
+		 [33] 'Palate_-_Bony_palate_surface'
+		 [34] 'Palate_-_Posterolateral_palatal_pits_presence'
+		 [35] 'Basicranium-_Parapterygoid_fossae_height'
+		 [36] 'Basicranium_-_Sphenopalatine_vacuities_presence_and_size'
+		 [37] 'Basicranium_-_Carotid_circulation_foramina_configuration'
+		 [38] 'Basicranium_-_Alisphenoid_strut_presence'
+		 [39] 'Basicranium_-_Alisphenoid_canal_anterior_opening_presence'
+		 [40] 'Basicranium_-_Subsquamosal_fenestra_presence'
+		 [41] 'Bullae_-_Ectotympanic_bullae_size_and_extension'
+		 [42] 'Bullae_-_Posterior_suspensory_process_of_squamosal_presence'
+		 [43] 'Bullae_-_Mastoid_ossification'
+		 [44] 'Mandible_-_Capsular_process_presence_and_development'
+		 [45] 'Mandible_-_Superior_and_inferior_masseteric_ridges_shape'
+		 [46] 'Mandible_-_Masseteric_crest_anterior_edge_position'
+		 [47] 'Hyoid_-_Hyoid_shape'
+		 [48] 'Molar_roots_-_M1_labial_accessory_root_presence'
+		 [49] 'Molar_roots_-_m1_roots_number'
+		 [50] 'Molar_roots_-_m2_roots_number'
+		 [51] 'Incisors_-_Procumbency_degree'
+		 [52] 'Incisors_-_Enamel_band_of_upper_incisors_shape'
+		 [53] 'Molars_-_General_pattern'
+		 [54] 'Molars_-_Labial_flexi_presence'
+		 [55] 'Molars_-_Maxillary_toothrows_orientation'
+		 [56] 'Molars_-_Flexi_penetration'
+		 [57] 'M1_-_Anterocone_division'
+		 [58] 'M1_-_Anteroloph_presence_and_development'
+		 [59] 'M1_-_Protostyle_presence'
+		 [60] 'M1_-_Paracone-protocone_connection'
+		 [61] 'M1_&_M2_Mesolophs_presence_and_development'
+		 [62] 'M1_-_Median_mure-protocone_connection'
+		 [63] 'M2_-_Protoflexus_presence'
+		 [64] 'M2_-_Paracone_accessory_loph_presence'
+		 [65] 'M2_-_Mesoflexus_internal_fossetti_number'
+		 [66] 'M3_-_Mesoloph_presence'
+		 [67] 'M3_-_Posteroloph_presence'
+		 [68] 'M3_-_Hypoflexus_development'
+		 [69] 'm1_-_Anteromedian_flexid_and_anteromedian_fossettid_presence'
+		 [70] 'm1_-_Anterolabial_cingulum_presence'
+		 [71] 'm1_-_Ectolophid_and_ectostylid_presence'
+		 [72] 'm1_&_m2_-_Mesolophids_presense_and_size'
+		 [73] 'm2_-_Anterolabial_cingulum_presence'
+		 [74] 'm2_&_m3_-_Anterolophid_presence'
+		 [75] 'm3_-_Anterolabial_margin_shape,_protoflexid_presence'
+		 [76] 'm3_-_Posteroflexid_presence_and_size'
+		 [77] 'Ribs_-_Ribs_number'
+		 [78] 'Ribs_-_Tuberculum_of_first_rib_articulation'
+		 [79] 'Vertebrae_-_Anapophyses_presense'
+		 [80] 'Vertebrae_-_Hemal_arches_presence_and_shape'
+		 [81] 'Humerus_-_Entepicondylar_foramen_presence'
+		 [82] 'Humerus_-_Supratrochlear_foramen_presence'
+		 [83] 'Calcaneum_-_Trochlear_process_position'
+		 [84] 'Penis_-_Bacular_mounds_presence'
+		 [85] 'Penis_-_Bacular_cartilaginous_apparatus_shape'
+		 [86] 'Penis_-_Nonspinous_tissue_of_crater_rim_extension'
+		 [87] 'Penis_-_Dorsal_papilla_spine_presence'
+		 [88] 'Penis_-_Urethral_processes_subapical_lobule_on_ventral_surface_presence'
+		 [89] 'Reproductive_tract_-_Preputial_glands_presence_and_number'
+		 [90] 'Reproductive_tract_-_Prostate_glands_presence'
+		 [91] 'Reproductive_tract_-_Anterior_prostate_glands_presence'
+		 [92] 'Reproductive_tract_-_Vesicular_glands_presense_and_shape'
+		 [93] 'Reproductive_tract_-_Preputial_glands_extension'
+		 [94] 'Reproductive_tract_-_Dorsal_prostates_presence_and_number'
+		 [95] 'Reproductive_tract_-_Ampullary_glands_shape'
+		 [96] 'Reproductive_tract_-_Vesicular_gland_subterminal_flexure_shape'
+		 [97] 'Gall_bladder_-_Gall_bladder_presence'
+		 [98] 'Stomach_-_Gastric_glandular_epithelium_distribution'
+	;
+	
+	STATELABELS
+		1
+		'Four_mammae_present_in_inguinal_and_abdominal_pairs'
+		'six_mammae_in_inguinal,_abdominal,_and_postaxial_pairs'
+		'eight_mammae_in_inguinal,_abdominal,_postaxial,_and_pectoral_pairs'
+		,
+		2
+		'Claws_of_manus_small,_not_extending_much_beyond_digital_pads,_not_keeled'
+		'claws_long,_extending_conspicuously_beyond_digit_pads_and_ventrally,_keeled_for_about_half_their_length'
+		,
+		3
+		'Ungual_tufts_at_base_of_manual_claws_present_and_long'
+		'reduced_or_absent'
+		,
+		4
+		'Hypothenar_pad_of_pes_present'
+		'absent_or_vestigial'
+		,
+		5
+		'Plantar_pads_on_hindfeet_large_and_fleshy,_interdigitals_1-4_set_close_together,_often_in_contact'
+		'pads_smaller_but_still_fleshy,_interdigitals_1_and_4_displaced_proximally_relative_to_2_and_3'
+		'interdigital_pads_distributed_as_in_state_1_but_extremely_small_and_with_low_relief'
+		,
+		6
+		'Plantar_surface_of_hindfeet_smooth,_without_well-developed_squamae'
+		'plantar_surface_covered_with_squamae'
+		,
+		7
+		'Ungual_tufts_present_on_all_claws_of_hindfoot_as_a_uniform_thick_sheath_extending_tobeyond_claw_tip'
+		'tufts_absent_on_digit_I_(dI),_present_on_dII_dV_as_a_uniform_thick_sheath_extending_tobeyond_claw_tip'
+		'tufts_absent_on_dI,_present_as_sparse_cover_and_with_few_hairs_extending_beyond_the_claw_tip_on_dII-dV'
+		'tufts_extremely_reducedabsent_on_all_claws'
+		,
+		8
+		'Natatory_fringes_on_hindfeet_absent'
+		'present'
+		,
+		9
+		'Interdigital_webbing_on_hindfeet_absent'
+		'present_but_small,_not_extending_to_first_interphalangeal_joint_of_any_digit'
+		'present_and_long,_extending_to_beyond_first_interphalangeal_joints_of_digits_II,_III,_and_IV'
+		,
+		10
+		'Dorsal_surface_of_hindfeet_densely_covered_with_white_hairs,_feet_appear_solid_white'
+		'dorsal_surface_sparsely_covered_with_short_silvery_hairs,_feet_appear_grayish_whitepale_tan'
+		'dorsal_surface_covered_with_dark_hairs,_feet_appear_brown'
+		'dorsal_surface_densely_covered_with_brown_and_white_silvery_hairs'
+		,
+		11
+		'Ventral_surface_of_tail_covered_with_dark_hairs'
+		'covered_with_hairs_with_dark_basal_band_and_white_distal_band'
+		'covered_with_white_hairs'
+		,
+		12
+		'Tail_densely_furred,_scales_not_visible_even_at_higher_magnification'
+		'tail_sparsely_furred,_scales_macroscopically_obvious'
+		,
+		13
+		'Dorsal_and_ventral_fur_without_grooved_spines'
+		'with_grooved_spines'
+		,
+		14
+		'Ventral_fur_with_plumbeous_dark_gray_base'
+		'ventral_fur_entirely_white,_without_dark_base'
+		,
+		15
+		'Dorsal_and_ventral_colors_sharply_delimited,_dorsum_much_darker_than_pale_ventral_surface,_resulting_in_conspicuous_countershading'
+		'dorsal_and_ventral_colors_subtly_delimited,_dorsum_slightly_darker_than_ventral_surface,_resulting_in_weak_countershading'
+		'limits_of_dorsal_and_ventral_colors_indistinct,_ventral_surface_dark,_countershading_absent'
+		,
+		16
+		'Subauricular_patches_absent'
+		'present'
+		,
+		17
+		'Rostral_tube_absent'
+		'present'
+		,
+		18
+		'Nasals_with_blunt_posterior_margin'
+		'nasals_with_acutely_pointed_terminus,_forming_a_sharp_angle'
+		,
+		19
+		'Nasals_short,_not_extending_posteriorly_beyond_the_triple-point_suture_between_the_maxillary,_frontal,_and_lacrimal'
+		'long,_extending_posteriorly_well_beyond_the_maxillary-frontal-lacrimal_suture'
+		,
+		20
+		'Premaxillaries_long,_extending_posteriorly_beyond_the_nasals'
+		'shorter,_extending_posteriorly_to_about_the_same_level_as_the_nasals'
+		'very_short,_terminating_anterior_to_the_nasals'
+		,
+		21
+		'Lacrimal_equally_contacting_maxillary_and_frontal_bones'
+		'lacrimal_contacting_mainly_maxillary'
+		,
+		22
+		'Interorbital_region_symmetrically_constricted_(hourglass-shapedamphoral),_with_rounded_supraorbital_margins'
+		'interorbital_region_symmetrically_constricted_with_squared_supraorbital_margins'
+		'interorbital_region_symmetrically_constricted_with_conspicuously_beaded_supraorbital_margins'
+		'interorbital_region_convergent_anteriorly_(cuneate)_with_weakly_beaded_supraorbital_margins'
+		'interorbital_region_convergent_anteriorly_with_well-developed_supraorbital_crests'
+		,
+		23
+		'Postorbital_ridge_absent,_posterior_orbital_wall_without_conspicuous_relief,_frontosquamosal_suture_exposed'
+		'postorbital_ridge_present_and_concealing_frontosquamosal_suture_in_most_old_specimens'
+		,
+		24
+		'Frontosquamosal_suture_colinear_with_the_frontoparietal_suture,_dorsal_facet_of_frontal_never_in_contact_with_squamosal'
+		'frontosquamosal_suture_anterior_to_frontoparietal_suture,_leading_to_an_area_of_contact_between_dorsal_facet_of_frontal_and_squamosal'
+		,
+		25
+		'Parietals_restricted_to_the_dorsal_surface_of_the_braincase,slightly_expanded_below_the_lateral_edges_of_the_dorsal_at_about_the_squamosal_root_of_the_zygomatic_arch'
+		'parietals_deeply_expanded_onto_lateral_surface_of_the_braincase'
+		,
+		26
+		'Interparietal_wider_than_posterior_border_of_frontals,_in_contact_with_squamosal'
+		'interparietal_strap-shaped,_nearly_as_wide_as_posterior_border_of_frontals,_but_not_in_contact_with_squamosal'
+		'interparietal_wedge-shaped,_about_half_as_wide_as_posterior_border_of_frontals,_not_in_contact_with_squamosal'
+		,
+		27
+		'Basicranial_flexion_weakly_pronounced,_foramen_magnum_oriented_mostly_caudad'
+		'strongly_pronounced,_foramen_magnum_oriented_mostly_posteroventrally'
+		,
+		28
+		'Zygomatic_plate_narrow_and_zygomatic_notch_indistinct,_anterior_border_of_plate_flat,_below_or_slightly_in_front_of_anterior_margin_of_superior_maxillary_root_of_zygoma'
+		'plate_broad_with_moderate_deep_notch,_anterodorsal_margin_smoothly_rounded,_conspicuously_anterior_to_superior_maxillary_root_of_zygoma'
+		'plate_broad_and_notch_conspicuous,_anterodorsal_margin_produced_as_a_sharp_corner_or_spinous_process,_conspicuously_anterior_to_superior_maxillary_root_of_zygoma'
+		,
+		29
+		'Posterior_margin_of_zygomatic_plate_situated_anterior_to_the_alveolus_of_M1'
+		'approximately_even_with_the_alveolus_of_M1'
+		,
+		30
+		'Jugal_present_and_large,_maxillary_and_squamosal_processes_of_the_zygoma_not_overlapping'
+		'jugal_present_and_small,_maxillary_and_squamosal_processes_overlapping,_but_not_in_contact'
+		'jugal_absent,reduced_to_slivers_of_bones,_maxillary_and_squamosal_processes_in_contact'
+		,
+		31
+		'Posterior_margins_of_incisive_foramina_conspicuously_projecting_between_first_molars'
+		'terminating_anteriorly_or_at_the_front_of_first_molar_alveoli'
+		,
+		32
+		'Palate_short,_mesopterygoid_fossa_extends_anteriorly_between_the_molar_rows'
+		'palate_of_intermediate_length,_mesopterygoid_fossa_extends_anteriorly_between_the_maxillary_bones_but_not_between_M3s'
+		'palate_long,_mesopterygoid_fossa_does_not_extend_anteriorly_between_the_maxillary_bones'
+		,
+		33
+		'Bony_palate_flat,_with_shallow_lateral_excavations,_never_with_median_longitudinal_ridge'
+		'with_deep_lateral_troughs_separated_by_median_longitudinal_ridge'
+		,
+		34
+		'Posterolateral_palatal_pits_absent'
+		'one_simple_small_foramen_present_at_each_side_of_the_posterior_palate'
+		'posterolateral_palatal_pits_always_present_as_conspicuous_perforations,_usually_more_than_one_foramen,_not_recessed_in_fossae_or_recessed_in_shallow_depression'
+		'posterolateral_palatal_pits_always_present_as_perforations_within_deeply_recessed_fossa,_generally_with_three_foramina,_one_directed_posteriorly,_one_anteriorly,_and_one_dorsally'
+		,
+		35
+		'Parapterygoid_fossae_at_same_level_as_palate'
+		'parapterygoid_fossae_dorsally_excavated_but_not_reaching_level_of_mesopterygoid_roof'
+		'parapterygoid_fossae_deeply_excavated,_reaching_level_of_mesopterygoid_roof'
+		,
+		36
+		'Sphenopalatine_vacuities_present_as_large_apertures_along_the_presphenoid,_reaching_basisphenoid'
+		'vacuities_present_but_reduced,_generally_as_narrow_openings,_anterior_to_basisphenoid-presphenoid_suture'
+		'vacuities_absent,_mesopterygoid_roof_totally_ossified'
+		'vacuities_present_but_reduced,_situated_posterior_to_basisphenoid-presphenoid_suture'
+		,
+		37
+		'Stapedial_foramen_and_posterior_opening_of_alisphenoid_canal_large,_squamosal-alisphenoid_groove_and_sphenofrontal_foramen_present'
+		'stapedial_foramen_and_posterior_opening_of_alisphenoid_canal_large,_squamosal-alisphenoid_groove_and_sphenofrontal_foramen_absent'
+		'stapedial_foramen_and_posterior_opening_of_alisphenoid_canal_small,_squamosal-alisphenoid_groove_and_sphenofrontal_foramen_absent,_secondary_branch_crosses_dorsal_surface_of_pterygoid_plate'
+		,
+		38
+		'Alisphenoid_strut_present,_buccinator-masticatory_and_accessory_foramen_ovale_separate'
+		'strut_absent,_buccinator-masticatory_and_foramen_ovale_confluent'
+		,
+		39
+		'Anterior_opening_of_alisphenoid_canal_present,_large'
+		'absent'
+		,
+		40
+		'Subsquamosal_fenestra_present'
+		'fenestra_vestigial_or_absent'
+		,
+		41
+		'Ectotympanic_bullae_small,_exposed_flange_of_periotic_extends_to_internal_carotid_canal'
+		'ectotympanic_bullae_intermediate,_exposed_wedge_of_periotic_smaller_and_not_contributing_to_wall_of_carotid_canal'
+		'ectotympanic_bullae_large,_periotic_bone_mostly_masked_in_ventral_view'
+		,
+		42
+		'Posterior_suspensory_process_of_squamosal_present_and_connected_to_the_tegmen_tympani'
+		'posterior_suspensory_process_absent,_tegmen_tympani_not_touching_or_barely_in_contact_with_squamosal'
+		,
+		43
+		'Mastoid_completely_ossified,with_a_diminutive_pit_in_the_dorsal_contact_with_the_exoccipital_border'
+		'mastoid_with_conspicuous_fenestra'
+		,
+		44
+		'Capsular_process_of_lower_incisor_alveolus_absent'
+		'projection_present_but_reduced_as_a_slight_rounded_elevation'
+		'projection_present,_well_developed_as_a_conspicuous_swelling_with_acute_projection'
+		,
+		45
+		'Superior_and_inferior_masseteric_ridges_converge_anteriorly_as_an_open_chevron'
+		'anterior_portion_of_ridges_conjoined_as_single_crest'
+		,
+		46
+		'Anterior_edge_of_masseteric_crests_below_m1'
+		'edge_anterior_to_m1,_extending_to_diastema'
+		,
+		47
+		'Entoglossal_process_of_basihyal_present_as_small_knob,_basihyal_arched,_and_thyrohyal_long,_greater_thanequal_to_the_length_of_the_basihyal'
+		'entoglossal_process_absent,_basihyal_straight,_and_thyrohyal_short,_less_than_length_of_basihyal'
+		,
+		48
+		'Labial_accessory_root_of_M1_absent'
+		'present'
+		,
+		49
+		'two'
+		'three'
+		'four'
+		,
+		50
+		'Second_lower_molar_with_two_roots'
+		'three_roots'
+		,
+		51
+		'Incisors_opisthodont'
+		'orthodont'
+		,
+		52
+		'Enamel_band_of_upper_incisors_smoothly_rounded,flattened_but_without_labial_bevel'
+		'band_flattened_medially,_with_distinct_labial_bevel'
+		,
+		53
+		'Molars_bunodont_and_brachydont'
+		'molars_planar_and_hypsodont'
+		,
+		54
+		'Labial_flexi_not_patent,_closed_off_by_labial_cingula'
+		'labial_flexi_patent,_cingula_absent'
+		,
+		55
+		'Maxillary_toothrows_parallel'
+		'anteriorly_convergent'
+		,
+		56
+		'Flexi_of_M1_and_M2_do_not_interpenetrate'
+		'flexi_meet_at_midline,_enamel_overlaps'
+		'flexi_interpenetrate'
+		,
+		57
+		'Anterocone_of_M1_divided_into_labial_and_lingual_conules_by_anteromedian_flexus'
+		'anterocone_partially_divided_into_labial_and_lingual_conules_by_internal_fold_of_procingulum,_anteromedian_flexus_absent'
+		'anterocone_undivided,_anteromedian_flexus_and_internal_fold_of_procingulum_absent'
+		,
+		58
+		'Anteroloph_on_M1_well-developed_and_discrete,_reaching_the_labial_cingulum,_anteroflexus_present'
+		'anteroloph_present_but_small,_not_reaching_the_labial_cingulum,_anteroflexus_absent'
+		'anteroloph_fused_with_anterocone_labially,_anteroflexus_present_as_small_fossette'
+		'anteroloph_and_anteroflexus_absent'
+		,
+		59
+		'Protostyle_on_M1_absent'
+		'present'
+		,
+		60
+		'Paracone_of_M1_connected_to_protocone_by_enamel_bridge_situated_at_posteriormost_end_of_protocone'
+		'paracone_connected_to_protocone_by_enamel_bridge_situated_at_anterior_portion_of_protocone'
+		'protocone_and_paracone_forming_single_dentine_basin_without_enamel_connection'
+		,
+		61
+		'Mesolophs_on_M1_and_M2_well-developed,_extending_from_the_median_mure_to_the_labial_cingulum,_fused_with_mesostyle'
+		'mesolophs_small,_not_extending_to_labial_cingulum_and_not_fused_with_the_mesostyle'
+		'mesolophs_on_M1_and_M2_absent'
+		,
+		62
+		'Median_mure_connected_to_protocone_on_M1'
+		'median_mure_not_connected_to_protocone'
+		,
+		63
+		'Protoflexus_of_M2_present'
+		'absent'
+		,
+		64
+		'Paracone_on_M2_without_accessory_loph'
+		'accessory_loph_present_posterior_to_paracone'
+		,
+		65
+		'Mesoflexus_present_as_single_internal_labial_fossette_on_M2'
+		'mesoflexus_divided_into_labial_and_medial_fossetti'
+		,
+		66
+		'Mesoloph_on_M3_present_and_well_developed'
+		'absent_or_vestigial'
+		,
+		67
+		'Posteroloph_on_M3_present'
+		'absent'
+		,
+		68
+		'Hypoflexus_on_M3_present,_remaining_excavated_until_later_wear_stages'
+		'hypoflexus_absent_or_diminutive,_disappearing_with_little_occlusal_wear'
+		,
+		69
+		'Anteromedian_flexid_and_anteromedian_fossettid_absent_on_first_lower_molar'
+		'anteromedian_flexid_absent_but_anteromedian_fossettid_present'
+		'anteromedian_flexid_present_and_anteromedian_fossettid_absent'
+		,
+		70
+		'Anterolabial_cingulum_on_m1_absent'
+		'long_anterolabial_cingulum_present'
+		,
+		71
+		'Ectolophid_and_ectostylid_on_m1_absent'
+		'present'
+		,
+		72
+		'Mesolophids_present_and_well_developed_on_m1_and_m2'
+		'mesolophids_present_in_unworn_dentition_but_small,_not_extending_to_lingual_cingulum'
+		'mesolophids_completely_absent'
+		,
+		73
+		'Anterolabial_cingulum_present_on_m2'
+		'absent'
+		,
+		74
+		'Anterolophid_absent_or_weakly_expressed_on_m2_and_m3'
+		'anterolophid_and_companion_metaflexid_distinct'
+		,
+		75
+		'Anterolabial_margin_of_m3_with_shelf-like_cingulum,_separated_from_protoconid_by_protoflexid'
+		'anterolabial_margin_of_m3_smoothly_rounded,_without_cingulum,_protoflexid_absent'
+		,
+		76
+		'Posteroflexid_on_m3_present,_well_developed'
+		'posteroflexid_present_as_a_small_groove,_obvious_only_in_juveniles,_obliterated_with_wear'
+		'posteroflexid_absent'
+		,
+		77
+		'13_ribs_present'
+		'12_ribs'
+		,
+		78
+		'Tuberculum_of_first_rib_articulates_with_transverse_process_of_first_thoracic_vertebra_only'
+		'first_rib_contacts_transverse_processes_of_both_the_first_thoracic_and_seventh_cervical_vertebrae'
+		,
+		79
+		'Anapophyses_present_on_the_17th_thoracico-lumbar_vertebra'
+		'anapophyses_absent_or_vestigial'
+		,
+		80
+		'Hemal_arches_absent_between_caudal_vertebrae_2_and_3'
+		'hemal_arches_present,_with_simple_posterior_border'
+		'present,_with_spinous_posterior_border'
+		,
+		81
+		'Entepicondylar_foramen_of_humerus_present'
+		'absent'
+		,
+		82
+		'Supratrochlear_foramen_in_humerus_absent'
+		'present'
+		,
+		83
+		'Trochlear_process_of_calcaneum_at_the_same_level_as_posterior_articular_facet,_trochlear_process_broad_and_shelf-like'
+		'gap_between_proximal_edge_of_trochlear_process_and_posterior_articular_facet,_process_shorter_and_less_shelf-like'
+		,
+		84
+		'Lateral_bacular_mounds_absent_or_diminutive'
+		'present_as_large_protuberances'
+		,
+		85
+		'Large_bacular_cartilaginous_apparatus_with_central_digit_more_robust_than_lateral_digits'
+		'reduced_cartilaginous_apparatus_with_slim_central_digit'
+		'bifid_cartilaginous_apparatus_with_central_digit_absent'
+		,
+		86
+		'Nonspinous_tissue_of_crater_rim_does_not_conceal_bacular_mounds'
+		'nonspinous_tissue_conceals_bacular_mounds'
+		,
+		87
+		'Dorsal_papilla_of_glans_penis_spineless'
+		'spinous'
+		'apex_of_dorsal_papilla_with_sinlge_spine'
+		,
+		88
+		'Subapical_lobule_on_ventral_surface_of_urethral_processes_absent'
+		'present'
+		'State_2'
+		,
+		89
+		'Two_pairs_of_preputial_glands_present'
+		'one_pair_present'
+		'preputial_glands_absent'
+		,
+		90
+		'Two_pairs_of_ventral_prostate_glands_present'
+		'ventral_prostate_glands_absent'
+		,
+		91
+		'Anterior_prostate_glands_present'
+		'absent'
+		,
+		92
+		'Vesicular_glands_present,_large,_shaped_like_a_caneinverted_"J"'
+		'vesicular_glands_present,_shaped_like_small_diverticula'
+		'vesicular_glands_absent'
+		,
+		93
+		'Preputial_glands_extend_tobeyond_the_ventral_flexure_of_the_penis'
+		'do_not_extend_to_the_ventral_flexure_of_the_penis'
+		,
+		94
+		'Dorsal_prostates_absent'
+		'one_pair_present'
+		'two_pairs_present'
+		,
+		95
+		'Ampullary_glands_forming_tufts_of_tubules_that_extend_cranially_from_the_base_of_the_vas_deferens'
+		'ampullary_glands_compact,_not_elaborate'
+		,
+		96
+		'Subterminal_flexure_of_vesicular_gland_rounded_and_smooth'
+		'irregularly_lobed_and_notched'
+		'small_and_finger-shaped'
+		,
+		97
+		'Gall_bladder_present'
+		'absent'
+		,
+		98
+		'Gastric_glandular_epithelium_of_stomach_limited_to_antrum,_not_extending_beyond_incisura_angularis'
+		'gastric_glandular_epithelium_covers_antrum_and_proximal_portion_of_corpus_near_esophageal_opening'
+		,
+	;
+	
+	MATRIX
+	Nyctomys_sumichrasti		               000000000100010000000400000000100103000100010000000000000000000100001010000000000000??000112000?10
+	Peromyscus_maniculatus		             1000010000200000100100000100000000000000101100000000000000000100?0110101000200000000????2000????0?
+	Delomys_sublineatus		                20001100011100001001000001011000010101001010001000000002000000000000111000000100111?????????????00
+	Thomasomys_baeops		                  100000100101001100{0,1}200001100110001122000101200111000000000000000000021100000011{0,1}1001??10100001?000
+	Wiedomys_pyrrhorhinos		              200001000100001000{0,1}203000101000101100100201000?11000000000000010000021000000111111110?00??????????
+	Aegialomys_xanthaeolus		             200011100111000000{0,1}{1,2}14001{1,2}01{0,1}1020310210111{0,1}110112100000022000000000111000000110211?11000????????10
+	Amphinectomys_savamis		              ???????121?10000000214?00201101203?1???1???1?0????1?0?????????????????????????????????????????????
+	Cerradomys_subflavus		               2000111001110000000104001{1,2}010{1,2}010310210111{0,1}2001120000000100{0,1}0000100{0,1}11000000110211112000????????10
+	Eremoryzomys_polius		                2000110000210010000104001201100103102000111010100?000000200000000001110001001?????????????????????
+	Euryoryzomys_lamia		                 2000101001210000001203000101121202120{0,1}00110200?00000000120000000101011000000????????????????????1?
+	Euryoryzomys_macconnelli		           200010100121000000010300{0,1}{1,2}01111202120100110000100000000120010000101011100000110111110100????????10
+	Euryoryzomys_russatus		              2000101001210000000103000101111102120{0,1}001102001000000001200000001010110000001101111?????????????1?
+	Handleyomys_alfaroi		                2000101001210000000{1,2}0300{0,1}10111120{2,3}100100111100?121000000200100001011111000001??????110001000011110
+	Handleyomys_chapmani		               200010100101000000010300{0,1}101{0,1}11203102100111200?12100000020010000101111000000111111?11000????????10
+	Handleyomys_intectus		               100010100101001000121000{0,1}20111120202010001110011{1,2}1100002200000001011111000?011?111??????????????10
+	Handleyomys_rostratus		              2000111001110000000103000101011203100100{0,1}11100?121000000200{0,1}00001011110000001111111110001000011210
+	Holochilus_brasiliensis		            201121312101001000011211110201111{2,3}202000211211112101111223001110?000110200021102111101011000011011
+	Hylaeamys_megacephalus		             200010100111000000011300010111120{2,3}1{1,2}11001110001000000000200000000010111000001111111101001000010110
+	Hylaeamys_yunganus		                 200{0,1}101001210000000103000101111202121100111000?0000000012000000010111110000011?111?10100????????10
+	Lundomys_molitor		                   2111213121010010001101001102110212212100111100102{0,1}00011101001000?10011010002110211110000????????10
+	Melanomys_caliginosus		              2000112002010020001{1,2}14011201111102122101110110?120100000220100100001110000001112111110001000011010
+	Microryzomys_minutus		               200011100111002000110000011002110211010001120010000000000001000000102100000011111111??0?1000011011
+	Mindomys_hammondi		                  200010200?01001000010301110010110{1,2}120101010000?00000000220000010100011100000????????????????????10
+	Neacomys_minutus		                   2000111001011100001204000101011202110100011200?00000000000010000001111000000?????????0????????????
+	Neacomys_musseri		                   2000111001011100001204000101011202111100011100?00000000000010000001111000010???????10000????????11
+	Neacomys_spinosus		                  200011100101110000120400010101120211010001{0,1}200?100000000200100000011110000001111111100001000111010
+	Nectomys_apicalis		                  201121312101001001120401120111110312210111021011200000012200001000011100001011?21?1?????????????11
+	Nectomys_squamipes		                 20012121210100100112140111011111031{1,2}210111011011200000012200001000001100000011?21?110???1000011011
+	Nephelomys_albigularis		             200010100111000100010000{0,1}101121103110{0,1}0011{0,1}10010100000020000000000011110000011?111110100????????10
+	Nephelomys_levipes		                 200010100111000000011100{0,1}{1,2}01111003110000111100?01000000200000000000111100000110111110100????????1?
+	Nesoryzomys_narboroughi		            ?000111000200011000111001101110203102101210211112000000000010010000011000000110011111??01111?11?10
+	Nesoryzomys_swarthi		                ?000111000100011000111001101100103102100210211112?000000????????????????????1102111???????????????
+	Oecomys_bicolor		                    2000001001010100000114001100011202120{0,1}00{0,1}1{0,1}200?100000001200000010001111000001111101101001???????10
+	Oecomys_catherinae		                 2000001001010000000104001100111202120100110100?10000000120000001000011100000??????????????????????
+	Oecomys_concolor		                   2000001001010110000104001100011202122{0,1}00{0,1}11100?100000001000000010000111000001101101101001000011010
+	Oecomys_mamorae		                    20000110010101100001040011000{1,2}1202122100111100?10000000120000001000011100000111111?10100????????10
+	Oecomys_trinitatis		                 2000001001010000000114001100011202120{0,1}00{0,1}1{0,1}200?11000000120000001000011100000111111110???????????10
+	Oligoryzomys_flavescens		            2000111001110010001100000101021202001100011201?00000000000010000000111000000111?11?100101???????1?
+	Oligoryzomys_fornesi		               2000111001110010001100000101021202001100011201?000000000000100000001110000001???????????1?????????
+	Oligoryzomys_fulvescens		            20001110011100100011000001010212020011000112011000000000000100000000110000001112111100102000?11010
+	Oligoryzomys_nigripes		              200011100111000000{0,1}100000101021202001100011201100000000000010000000011000000111211?100102???????10
+	Oligoryzomys_stramineus		            2000111001110000001100000101021202001100011201?00000000000010000000111000000??????????????????????
+	Oreoryzomys_balneator		              2000111001010000001200000100021102110100011200?00000000000010000001011000000???????10000????????11
+	Oryzomys_couesi		                    2001212001110010000114001201010203122100111200?12?00000020010000100011000100111211110011????????10
+	Oryzomys_palustris		                 201121201121000000111400120101020310210011110011{1,2}{0,1}000000100100001000110001001112111101111000011110
+	Pseudoryzomys_simplex		              2001212011210000001113001102010202102{0,1}00111200112100000013011000?10010020001111211111?001???????11
+	Scolomys_ucayalensis		               100111100101101001121300020000120212211011010010001000002201001001111100000011101111?100????????10
+	Sigmodontomys_alfari		               200121201201000000{0,1}{1,2}140111010{1,2}11021121011102{0,1}01121000001220000100001110010101102111111201000?2101?
+	Sigmodontomys_aphrastus		            200121200{2,1}01001001121401110000110{1,2}112101110{0,1}00?12?10000222000010000111000110???????11100????????11
+	Sooretamys_angouya		                 200011000101000000{0,1}1{0,1}1001{1,2}01110103102100111200?01000000020110000100011100000110210110100100001101?
+	Transandinomys_talamancae		          200010100111000000010300{0,1}10111120{2,3}11010011{0,1}100?000000002200000000011111000001101111101001000010110
+	Zygodontomys_brevicauda		            200011100111001000{0,1}1040002011{1,2}02021{0,2}2100110101100100000023022010?10011020002111{0,1,2}111101001000011010
+	Zygodontomys_cherriei		              200010100111001000{0,1}104000201110202100101110211100100000023022010?11011020002111{0,1,2}111101001000011010
+	Oryzomys_curasoae		                  ?????????????????01214011??10{1,0}020312210??1?200?11000000010010000100?11000000??????????????????????
+	Oryzomys_gorgasi		                   2011213111110010001214011201000203122100111200?1??0000001?0100?010?11100000?????????????????????1?
+
+[Irbp - see Weksler, 2003]	
+Nyctomys_sumichrasti      CTGATGGGGATGCAAGCGGCCATTGAGCAGGCTATGAAGAGTCATGAGATTCTGGGCATCTCAGACCCTCAGACGCTGGCCCATGTGTTGACCRCCGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTCATCTCCTACGAGCCCAGTACCCTCGAGGCTCCCCAG---CAAGCACCAAYGCTCACCAACCTCACGCGAGAAGAACTGCTCGCCCAGCTACAGAGGAACATCCACCATGAGGTTCTTGAAGGCAATGTGGGTTACCTACGAGTGGATGACCTCCCTGGCCAGGAGGTACTGAGTGAGCTGGGSGAGTTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGGGCACCTCCTCCTTGGTGCTAGATCTCCGGCACTGTGCTGGTGGTCACATCTCCGGGATCCCTTATGTTATCTCCTACTTGCACCCTGGGAACACTGTCATGCAYGTGGATACCATCTATGATCGTCCCTCCAATACCACCACCGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACGGTGCTGACAAAGATGTGGTTGTCCTCACCAGCGGACRCACTGGGGGCGTGGCTGAGGACATCGCCTACATTCTCAAGCAGATGCGCAGGGCCATCGTCGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTSCAGAAGCTGAGAATAGGCCAGTCCAACTTCTTCCTCACAGTGCCTGTGTCCAGGTCCCTGGGACCCCTAGGAGGAGGTGGNCAGACATGGGAAGGGAGTGGAGTGCTGCCCTGTGTGGGGACACCTGCAGAGCAGGCCCTANAAAAGGCCCTGGCCATCCTCACCCTGCGTCGTGCTCTGCCAGGYGTTGTYCTTCGGCTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCAGGCCTGCTACATCACCTGGATAGCATGGACTACTCAGCCGTGGTCTCTGAGGAGGACTTANTGTCAAAGCTCAATGCTGGCTTGCAGGCTGTATCAGAGGACCCCAGGCTCCTGGTGAGAGCCACTGGACTCANAGAAAGTTCCTCTAGGCCTGAGACTGGGCCTAATGACTCCCCGGAAGCCACTCCTGAGGTGCCCAANGAAGAAGCCGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTCCCGGGCAATGTGGGCTATCTGCGCTTTGACACATTTGCCGATGCCTCTGTGCTGAGGGCANTGGGCCCTTACGTGCTGCNCCAGGTGTGGGAGCCATTG
+Peromyscus_maniculatus    CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTGTGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAAACGCTGGCCCACGTGCTGACAGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTCATCTCCTAYGAGCCCAGTACCCTCGAGACGCCCCAG---CAAGCGCCAACACTCACCAACCTCACCCGAGAAGAACTGTTGGTCCAGCTACAGAGGAACATCCACCATGAGGTTCTTGAGGGCAACGTGGGTTACCTACGAGTGGATGACCTCCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGGGTTCTTGGTGGACCACGTGTGGAGGCAGCTCATGGACACCTCCTCCTTGGTGCTAGATCTCCGGAACTGTGCTGGTGGTCACATCTCTGGGATCCCTTATGTCATCTCCTACTTGCACCCTGGGAACACTGTCATGCACGTGGATACCATCTATGATCGCCCCTCTAATACCACCACCGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGACGTGGTAGTCCTCACCAGTGGACGTACCGGGGGCGTGGCTGAGGACATCGCCTACATCCTCAAGCAGATGCGCAGGGCCATCGTGGTGGGTGAGCGGACGGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGGATAGGCCAGTCCAACTTCTTCCTCACAGTACCTGTGTCCAGGTCCCTGGGACCTCTGGGAGGAGGTGGCCAGACGTGGGAAGGCAGTGGAGTACTGCCCTGTGTGGGGACACCTGCCGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGTCGTGCCCTGCCAGGGGTTGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACGCTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCGTGGTCTCTGAGGAGGACCTAGTGACAAAGCTCAATGCTGGCTTGCAGGCTGTGTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCCAGAGAAAGCTCCTCTAAGCCCGAGACCGGGCCTAATGACCCCCCAGAAGCCGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCACTAGTGGACTCTGTGTTTCAGGTGTCTGTGCTACCAGGCAATGTGGGCTACCTGCGCTTTGACAGATTTGCAGACGCCTCTGTGCTGAAGGCACTGGGTCCCTACGTGCTGCACCAGGTGTGGGAGCCTCTG
+Delomys_sublineatus       CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCCGACCCTCAGATGCTGGCCCATGTGTTGACAGCCGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTCATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAG---CAAGCACCAACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGCTACAGAGGAACATCCACCATGAAATTCTTGAGGGCAATGTGGGTTACCTACGAGTGGATGACCTTCCCAGCCAGGAGGTACTGAGTGAGCTGGGGGGATTCTTAGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAGTACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCTTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGATCGCCCTTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCTTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTAGACATACTGGGGGTGTGGCCGAGGACATCACNTACATCCTCAAGCAGATGCGTAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGCGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGCGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTAGGGACACCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCCCTGCCAGGGGTTGTCCTCCGACTTCAGGAAGCCCTCCAGGAGTATTACACACTCGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCGTGGTCTCTGAGGATGACCTAGTAACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAACCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGTTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCTCGGAGGGCCCTTGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATA??????????????????????????????????????????????????????????????????????????????????
+Thomasomys_baeops         CTGATGGGAATGCAAGCAGCCATCGAGCAGGCTATGAAGAGCCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTGCAGAGTTCCTTGAATGATCCACGCCTCTTCATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAG---CAAGCACCAACGATCACCAGCCTCACCCGAGARGAACTGCTGGCCCAGCTACAGAGGAACATCCACCATGAAGTTCTTGAGGGCAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGNTGGGGGAATTCTTGGTGGNCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAGTACTAGATCTTCGGCACTGTGCTGGCGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATTTATGATCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAAATGCGCAGAGCCATAGTGGTAGGTGAGCGGACAGAGGGCGGTGCCTTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGAYACCTGCAGAGCAGGCCCTGGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCCCTGCCAGGGRTTGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTAGACCGAGTGCCAGGCCTGCTACACCACCTGGCTAACATGGACTACTCATCCGTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTAAGAGCCACTGGACCTAGAGAAAGCTCCNCTAGGCCTGAGACTGGGCCTAATGATCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAACTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACRCTGGGTCCTTATGTGTTGCACCAGGTATGGGAGCCCCTG
+Wiedomys_pyrrhorhinos     CTGATGGGAATGCAGACAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGCTCCTTGAATGACCCACGCCTCTTCATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAG---CAAGCACCAATGCTCACCAACCTTACCCGAGAAGAACTGCTGGCCCAGCTACAGAGAAACATCCACCATGAAGTTCTTGAGGGCAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAGTTCTTGGTGGCCCATGTGTGGAGACAGCTCATGAGCACCTCTTCCTTAGTACTAGATCTTCGGCACTGTGCTGGTGGCCACATCTCTGGGATACCTTACGTCATCTCCTACTTGCACCCTGGGAACACCGTCATGCACGTAGATACTATCTATGATCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGCGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTTCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGAACACCTGCAGAACAGGCCCTAGAGAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCCCTGCCGGGGGTTGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACAGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCGTGGTCTCTGAAGATGACCTAGTAACAAAGCTCAATGCTGGTTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCTTGAGACTGGGCTTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTGGTGGACTCTGTGTTTCAGGTATCTGTGCTGCCAGGCAATGTGGGATACCTGCGCTTTGACAAATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAGCCCCTA
+Aegialomys_xanthaeolus    CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAANTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCANGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTNGGGGAGAGATACAGTGCTGACAAAGATGTGGTNGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATANTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACGCTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAAGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCTTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTRGACTCTGTATTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCCGTGCTGAGGACACTGGGTCCTTATGTGCTGCAGCAGGTGTGGGAGCCCCTG
+Amphinectomys_savamis     CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACGGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCGGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAACTGCTGGCCCAAGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGCGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACACACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTAGGTGAGCAGACAGAGGGTGGTGCCTTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTTGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCCTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAGGGAAGAAGCTGCCCGGAGGGCGCTAGTGGACTCTGTGTTTCAGGTCTCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCCGTGCTGAGGACACTGGGTCCTTACGTGCTGCAGCAGGTGTGGGAGCCCCTG
+Cerradomys_subflavus      CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCTCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGTCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGACACTGYGCTGGTGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACTACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGANATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGGGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTNTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGCGGAGGGGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCGGAGCAGGCCCTAGAAAANGCCCTGGCCATCCTCACCCTGCGCNGTGCTTTGCCAGGGGTCGTCCNCCGACTTCAGGAAGCCCTGCAGGACTATTACACAYTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAAGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGCTGCAGCAGGTGTGGGAGCCCCTG
+Eremoryzomys_polius       CTGATGGGGATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTNTGAGCATCTCAGACCCTCAGATGCTGGCCCACGTGCTGACGGCCGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTCGATGACCTTCCTGGCCAGGAGGTGCTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCCGGTGGTCACGTCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGCGGACATACTGGGGGTGTGGCTGAGGATATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGGGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCCGTGTCCAGGTCTCTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGGGTGCTACCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGAGCTCTGCCAGGGGTCGTCCTCCGGCTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGCGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCCGAGGATGACCTAGTGACGAAGCTCAATGCTGGCTTACAGGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTCGGCCTGAGACTGGGCCTAATGACCCCCCGGAAGCTGATCCTGAGGTGCCCAAGGAAGAAGCCGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGGTACCTGCGCTTTGACCGATTTGCAGACGCCTCTGTGCTGAGGACCCTGGGTCCTTACGTGCTGCGCCAGGTGTGGGAGCCCCTG
+Euryoryzomys_lamia        CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTTGCCCATGTGCTGACAGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCGACGCTCACCAATCTCACCCGAGAAGAACTGCTGATCCAGGTACAGAAGAACATCCACCATGAAGTTCTTGAGGGTGATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTGATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTACGACCGCCCCTCCAACACCACTACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGAACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCTCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCTGTATCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCATCCACCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGATACACCATCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATTCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGATCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTACCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGAYAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAGCCCCTG
+Euryoryzomys_macconnelli  CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCGACACTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAAGTTCTTGAGGGTAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTGATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTACGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCAATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCTCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCRCSGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAAGCCCTGGCCATCCTCACCCTGCGCCGTGCCCTGCCAGGGGTCGTCCACCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGATACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCAAGRCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAGCCTCTG
+Euryoryzomys_russatus     ???????????????????????????????????????AGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTTGCCCATGTGSTGACAGNTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCGACGCTCACCAATCTCACCCGAGAAGAACTGCTGGTCCAGGTACAGAAGAACATCCACCATGAAGTTCTTGAGGGTAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGCAATTCTTGGTGACCCATGTGTGGAGGCAACTCATGAGCACCTCTTCCTTGATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGAACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCTCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCTGTATCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCATCCACCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCTTGATACACCACCTGGCTAGCATGGACTACTCAGCGTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATTCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACCCTGGGTCCTTATGT?????????????????????????
+Handleyomys_alfaroi       CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCGGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCAATGCTCACCAACCTTACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAGGTTCTTGAGGGTAATGTGGGTTACTTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGCGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTCGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGACACCATCTATGACCGCCCCTCCAATACCAYCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGTAGAGCCATAGTGGTGGGTGAGCRGACAGAGGGTGGTGCCNTGGATCTCCAGAAGCTGAGAATAGGCCAATCCAACTTTTTCCTCACGGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAACAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGAYTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTYTYTGAGGACGACYTAGTGACAAAGCTCAATGCTGGCTTGCAAGCGGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCANTGGACCTAAAGAAAGCTCCTNTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGMTCCTGAGGTGCCCAAGGAAGAAGCTGCCCAGAAGGCCNTAGTGGACTNTGTGTTTCAGGTCTCCGTGCTGCCAGGCAATGTGGGATACNTGNGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAACCCCTG
+Handleyomys_chapmani      ?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+Handleyomys_intectus      CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCAATGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAAGTTCTTGAGGGTAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGAGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGACACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACAGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAACAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGTCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGAGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGYGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTC????????????????????????????????
+Handleyomys_rostratus     CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGRGCATCTCGGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCRAGGCTCCCCAA---CAAGCACCAACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAGGTTCTTGAGGGTAATGTGGGTTACTTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGCGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTCGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGACACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGTAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAACAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTTGTGGACCGAGTACCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGACGACCTAGTGACAAAGCTCAATTCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCRGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAAGGCCCTAGTGGACTCTGTGTTTCAGGTCTCCGTGCTGCCRGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGCCCTTATDTGTTGCACCAGGTGTGGGAGCCTCTG
+Holochilus_brasiliensis   CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATCCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATATCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGACCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGCACTGGTGGTCACATCTCTGGGATACCTTACATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACYAGTGGACATACTGGGGGCGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGATCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGTCCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGTGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGAGCCTGCTACACCACCTGGCTAGCATGGACTACTCGGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGCTGCAGCAGGTGTGGGAGCCCCTG
+Hylaeamys_megacephalus    CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATTCACCATGAAGTTCTTGAGGGTAATGTGGGTTACCTWCGAGTGGATGACCTTCCTGGGCAGGAGGTACTGAGTGAGCTGGGAGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGTACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGAAACACAGTCATGCACGTGGATACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCYAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTTCAGGACTATTACACATTGGTGGACCGAGTGCCGGGCCTGATACACCACCTAGCTAACATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTCTCYGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAGCCCCTG
+Hylaeamys_yunganus        CTGATGGGRATGCAAGCAGCAATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCAGCGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATTCACCATGAAGTTCTTGAGGGTAATGTGGGCTACCTACGAGTGGATGACCTTCCTAGCCAGGAGGTACTGAGTGAGCTGGGAGAATTCTTGGTGACTCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGTACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGAAACACAGTCATGCACGTGGATACCATCTATGACCGCCCCTCYAACACTACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACCCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTTGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACATTGGTGGACCGAGTGCCGGGCCTGATACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGCCCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTACCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTCTCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTACGTGTTGCACCAGGTGTGGGAGCCCCTG
+Lundomys_molitor          CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTACAGAGTTCCTTGAATGACCCACGTCTCTTTATCTCCTATGAGCCCAGTACCATCGAGGCTCCCCAA---CAAGCACCAACGTTCACCAACCTCACCCGAGAAGAACTGCTGGCTCAGGTACAGAGGAATATCTACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAGTTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTACATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATTCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCAGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAAGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCGCTAGGCCTGAGACTGGGCCTAATGATCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCAGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCAGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTG????????????????????????
+Melanomys_caliginosus     ???????????????????????????CAGGCTATGAAGAGTCNTGAGATTCTGAGCATCTCANACCCTCAGATGCTGGCCCATGTGCTGACTGCTGGAGTGCANAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTATCCTCGAGGCTCCCCAA---CAAGCACCAATGCTCACCAGCCTCACCAGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTANGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATATGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGCGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTGGGGGAGAGATACAGTGCTGACAAAGATGTGGTANTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACGCTGGTGGACCGAGTGCCAGGCCTGCTACACCATCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAAGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTC????????????????????????????????
+Microryzomys_minutus      CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTTGAGGCTCCCCAA---CAAGCGCCAACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACYTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATAAGTTATATCATTTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTTCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGATTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCATCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGATCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTACCAGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTACGTGTTGCACCAGGTGTGGGAGCCCCTG
+Mindomys_hammondi         ?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+Neacomys_minutus          CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTATTCTCGAAGCTCCCCAA---CAAGCACCAGCGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAATACCACCACTGAAATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGATATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAACAGGCCCTAGAAAAGGCGCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCTTTGGTCTCTGAGGATGATCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCCGAGACTGGACCTAACGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCYGTGCTACCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTAYGTGTTGCACCAGGTGTGGGAGCCCCTG
+Neacomys_musseri          CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTATCCTCGAAGCTCCCCAA---CAAGCACCAACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAATACCACCACTGAAATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAACAGGCCCTAGAAAAGGCGCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCAGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGATCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCCGAGACTGGACCTAACGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTACCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTACGTGTTGCACCAGGTGTGGGAGCCCCTG
+Neacomys_spinosus         CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTATCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGACGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACACCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCTAATACCACCACTGAAATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGATAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTAGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAACAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTCCACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGATCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTGTAGGCCTGAGACTGGGCCTAATGACCCTCCAGAAGCTGCTCCTGAGGTACCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTACCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTACGTGTTGCACCAGGTGTGGGAGCCCCTG
+Nectomys_apicalis         ?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+Nectomys_squamipes        CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACGGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCAGAGAAGAACTGTTGGCCCAGGTACAGAGGAACATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACRAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGCGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCGAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTAGGTGAGCGGACAGAGGGTGGTGCCTTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGTGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGAGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCTTGCGCCGTGCTCTGCCAGGGGTTGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGNTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCCTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGTGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCAGAGGGCCCTAGTGGACTMTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCCGTGCTGAGGACACTGGGTCCTTATGTGCTGCAGCAGGTGTGGGAGCCCCTG
+Nephelomys_albigularis    CTGATGGGRATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGAGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGCTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAAGTTCTTGAGGGTAATGTGGGTTACCTGCGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAACTGGGAGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGACACTGTGCTGGTGGTCACATCTCTGGGATACCTTACGTCATCTCCTACTTGCACCCTGGGACCACAGTCATGCATGTGGATACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCTCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGATACACCATCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGAWCCTCTAGGCCTGAGACTGGGCCTAAYGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGCAGGCCCTAGTAGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAGCCCCTG
+Nephelomys_levipes        ?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+Nesoryzomys_narboroughi   CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCGGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGCGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGATCTCCAGAAGCTTAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTNCTGCCTTGTGTGGGGACTCCTGCAGANNAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGNGCCGTGCNCTGCCAGGGGTNGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACGCTAGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAAGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGATCCACTGGCCCTAAAGAAAGCTCTTCTAGGTCCGAGACTGGGCCTAATAACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCCGTGCTGAGGACACTGGGTCCTTATGTGCTGCAGCAGGTGTGGGAGCCCCTG
+Nesoryzomys_swarthi       CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCGGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGCGGTCACATCTCTGGGATACCTTANATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGATCTCCAGAAGCTGAGAATAGGCCAGTCCGACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGATCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACGCTAGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAAGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGTCCGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCCGTGCTGAGGACACTGGGTCCTTATGTGCTNNNNCAGGTGTGGGAGCCCCTG
+Oecomys_bicolor           CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCRTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAACCACCAACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAAGTTCTTGAGGGTAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGAGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCGTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCTGTGTCCAGGTCTCTAGGACCCCTGGGAGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGTTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGATACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTACAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTGAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAGCCCCTG
+Oecomys_catherinae        ???????????????????????????????????????AGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTGCAGAGTTCCCTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAAGTTCTTGAGGGTAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGAGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCATGTGGATACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTACTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCAGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTAGGACCCCTGGGAGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGATACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAGCCCCTG
+Oecomys_concolor          CTGATGGGAATGCAAGCAGCTATTGASCAGGSTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACTCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAGGTTCTTGAGGGTAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGTCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGWGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTGGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCTGTGTCCAGGTCTCTAGGACCCCTGGGAGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGATACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGAYGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAGCCCCTG
+Oecomys_mamorae           ???????????????????????????????????????AGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCAAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAAGTTCTTGAGGGTAATGTGGGTTACCTACGCATGGATGACCTTCCTGGTCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCTAACTTTTTCCTCACGGTTCCTGTGTCCAGGTCTCTAGGACCCCTGGGAGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCCGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGATACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCTGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAGCCCCTG
+Oecomys_trinitatis        CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCAGCATGAAGTTCTYGAGGGTAATGTGGGTTACCTTCGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGAGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACGTCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGATCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCTGTGTCCAGGTCTCTAGGACCCCTGGGAGGAGGCGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGATACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGTGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTC????????????????????????????????
+Oligoryzomys_flavescens   CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCAGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAATGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATCTCCACCATGAAGTTCTCGAGGGAAATGTGGGTTACTTACGAGTGGATGACCTTCCTGGCCAGGAGGTTCTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCGGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGCGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCAGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCTTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATTCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAAGATGATCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCCGAAATTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGTTGAGGACACTGGGTCCTTACGTGTTACACCAGGTGTGGGAGCCCCTG
+Oligoryzomys_fornesi      CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCAGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAACCTGACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATCTCCACCATGAAGTTCTCGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGACAGGAGGTACTGAGTGAACTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCTTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCGGGGATACCTTATATCATCTCCTACTTGCACCCTGGRAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCAGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCTTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTTCGACTTCAGGAAGCTCTGCAGGACTATTACACACTGGTGGACCGAGTGCCCGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGATCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCGTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTACGTGTTACACCAGGTGTTGGAGCCCCTG
+Oligoryzomys_fulvescens   CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCAGGAGTACAGAGTTCCTTGAATGATCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTCGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCGGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGCGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCAGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCTTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGATCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAGGAAAGCTCCTCTAGGCCCGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCTGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTACGTGTTGCACCAGGTGTGGGAGCCCCTG
+Oligoryzomys_nigripes     CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCAGGGGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAG---CAAGCACCAACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTCGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCTTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCGGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCAGACAGAGGGTGGCGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCTTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCAGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGATCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCCGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTACGTGTTGCACCAGGTGTGGGAGCCCCTG
+Oligoryzomys_stramineus   CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCAGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAAGGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCTTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCGGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGCGGACATACTGGGGGTGTGGCTGAGGAYATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCAGACAGAGGGTGGCGCTCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCTTGGGCGGAGGTGGACAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGATCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAAAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCCGAGACTGGGCCTAATGACCCCCCAGAAGTTGCTCCTGAGGTGCCCARGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTRTCYGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAGCCCCTG
+Oreoryzomys_balneator     CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACACTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATATAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGCGGGGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAAGCCCTGGCTATCCTCACCCTGCGCCGTGCTCTGCCAGGAGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAACATGGACTACTCAGCCTTGGTCTCTGAGGATGATCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCCGAGACTGGGCCTAATGATCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTACCAGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTACGTGTTGCACCAGGTGTGGGAGCCCCTG
+Oryzomys_couesi           CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAACTGCTAGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCNCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTTTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGCGCTCTGCCCGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACGCTGGTGGACCGAGTGCCGGGCCTGCTACACCRCCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGACGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACGGGGCCTAATGACCCCCCAGAAGTTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGCTACCTGCGCTTTGACAGATTTGCAGATGCCTCNNNNCTGAGGACAC??????????????????????????????????????
+Oryzomys_palustris        CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAACTGCTAGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAAGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATYACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTAAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTTTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGTTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCCGTGCTGAGGACACTGGGTCCTTATGTGCTNNNNCAGGTGTGGGAGCCCCTG
+Pseudoryzomys_simplex     CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCRTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTACAGAGTTCCTTGAATGACCCACGCCTYTTTATATCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAACTNCTGGCCCAGGTACAGAGGAATATCCACCATGAANTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGACCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACTTCTTCCTTAATACTAGATCTTCGGCACTGCGCTGGTGGTCACATCTCTGGGATACCTTACATCATNTCCTACTTGCACCCTGGGAAYACAGTCATGCATGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGCGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTTGACCTCCAGAAGTTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTTCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGAGCCTGCTACACCACCTGGCTAACATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGCTGCAGCAGGTGTGGGAGCCCCTG
+Scolomys_ucayalensis      CTGGTGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTCATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAG---CAAGCATCAACACTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAGCATCCAACATGAAGTTCTTGAGGGTAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAGTTCTAGATCTTCGCCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCATGTGGATACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGCGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGAGAGGA---GGCCAGACATGGGAAGGCAGTGGTGTGCTACCTTGTGTGGGGATTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGTCGTGCCCTGCCAGGGGTCATCCTCCGACTTCAGGAAGCCCTGCAGGGCTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGATTTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTAAGAGCCACTGGACCCAAAGAAAGCTCCTCTAGGTCTGAGACTAGGCCTAATGATCCCCCAGAAGCTGCTCCAGAGGTGCCCAAGGAAGAAGCTGCCCGGAAGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCACCAGGTGTGGGAGCCCCTG
+Sigmodontomys_alfari      CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGAGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACTGCTGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTATCCTCGAGGCTCCCCAA---CAAGTACCAACGCTCATCAGCCTCACCGGAGAAGAANTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTANTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATATCTTATATCATCTCCTACNTGCACCCTGGGAACACAGTCATRCACGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTGGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGCGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCTTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACGCTGGTGGACCGAGTGCCGGGCCTGCTACACCATCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAAGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCNTTATGTGCTGCAG??????????????????
+Sigmodontomys_aphrastus   ?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+Sooretamys_angouya        CTGATAGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGGGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTACAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGTACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAGCCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAATATCCACCATGAAGTTCTTGAGGGAAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGGTACTGAGTGAGCTGGGGGAATTCTTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTAATACTAGATCTTCGGCACTGTGCTGGTGGTCACATCTCTGGGATACCTTATATCATCTCCTACTTGCACCCTGGGAACACAGTCATGCATGTGGATACCATCTATGACCGCCCATCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGGGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCCCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCTCTGGGTGGAGGTGGTCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTGCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCTGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTGGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGCTGCAGCAGGTGTGGGAGCCCCTG
+Transandinomys_talamancae CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGTCGTGAGATTCTGAGCATCTCAGACCCTCAGATGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGTTCCTTGAATGACCCACGCCTCTTTATCTCCTATGAGCCCAGCACCCTCGAGGCTCCCCAA---CAAGCACCAACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAAGTTCTTGAGGGTAATGTGGGTTACCTACGAGTGGATGACCTTCCTGGCCAGGAGATACTGAGTGAGCTGGGGGAATTCTTGGTGACCCATGTGTGGAGGCAGCTCATGAGCACCTCTTCCTTGATACTAGATCTTCGACACTGTGCTGGTGGTCACATCTCTGGGATACCTTATGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGATACCATCTACGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTAGGAGAGAGATACAGTGCTGACAAAGATGTGGTAGTCCTCACCAGTGGACATACTGGGGGTGTGGCTGAAGATATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTGGGTGAGCGGACAGAGGGTGGTGCTCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACGGTTCCTGTGTCCAGGTCTCTGGGACCCCTAGGAGGAGGTGGCCAGACATGGGAAGGCAGTGGTGTGCTGCCTTGTGTGGGGACTCCTGCAGAGCAGGCCCTAGAAAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCTCTGCCAGGGGTTGTCCACCGACTTCAGGAAGCCCTTCAGGACTATTACACACTGGTGGACCGAGTTCCGGGCCTGATACACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAATGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTCTAGGCCAGAGACTGGGCCTAATGACCCCCCAGAAGCTGCTCCTGAGGTGCCCAAGGAAGAAGCTGCCCGGAGGGCCCTAGTAGACTCTGTGTTTCAGGTATCCGTGCTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTCCAGATGCCTCNNNNNTGAGGACATTGGGNNNNNATGTGTTNNNNCAGGTGTGGGAGCCCCTG
+Zygodontomys_brevicauda   CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGNCGTGAGATTCTGGGCATCTCAGACCCTCAGGTGCTGGCCCATGTGCTGACAGCCGGAGTGCAGAGTTCCTTGAAYGACCCRCGCCTCTTCATCTCCTAYGAGCCCAGTACCCTCGAGGCTCCCCAG---CAAGCACCNACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAAGTTCTTGAGGGTAATGTAGGTTACCTACGMGTGGATGACCTTCCTAGCCAGGAGGTACTGAATGAGCTGGGGGAATTCCTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTGTTCCTTAGTACTAGATCTTCGGTACTGTGCTGGTGGTCACATCTCTGGGATACCTTAYGTCATCTCCTACTTGCACCCTGGGAACACAGTCATGCACGTGGACACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTCGGAGAGAGATACAGTGCTGACAAAGATGTGGTCATCCTTACCAGTGGACATACTGGGGGTGTGGCYGAGGACATCACCTACATCCTCAAGCAGATGCGCAGAGCCATAGTGGTAGGTGAGCGGACAGAGGGYGGTGCTCTGGACCTCCAGAAGCTGAGAATAGGCCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTAGGACCCCTGGGAGGAGGTGGCCAGACATGGGAAGGTAGTGGGGTGCTGCCTTGTGTGGGGACTCCTGCCGAGCAGGCCCTAGAGAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCCCTGCCAGGGGTCGTCCTCCGACTTCAGGAAGCCCTCCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTTCACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAACGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTGTAGGCCTGAGACTGGGCCTAATGACCCCGTAGAAGCTGCTCCTGAGGTGCCCAAGGAGGAAGCTGCCCGGAGGGCCCTNGTGGACTCTGTGTTTCAGGTATCCGTGTTGCCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCGCCAGGTGTGGGAGCCCCTG
+Zygodontomys_cherriei     CTGATGGGAATGCAAGCAGCCATTGAGCAGGCTATGAAGAGCCGTGAGATTTTGGGCATCTCAGACCCTCAGGTGCTGGCCCATGTGNTGACAGCCGGAGTGCAGAGTTCCTTGAACGACCCACGCCTCTTCATCTCCTACGAGCCCAGTACCCTCGAGGCTCCCCAG---CAAGCACCCACGCTCACCAACCTCACCCGAGAAGAACTGCTGGCCCAGGTACAGAGGAACATCCACCATGAAGTTCTTGAGGGTAATGTAGGTTACCTACGCGTGGATGACCTTCCTGGCCAGGAGGTANTAAATGAGCTGGGGGAATTCCTGGTGGCCCATGTGTGGAGGCAGCTCATGAGCACCTGTTCCTTAGTACTAGATCTTCGGTACTGTGCTGGTGGTCACATCTCTGGGATANCTTACGTCATCTCCTACGTGCACCCTGGGAACACAGTCATGCACGTGGACACCATCTATGACCGCCCCTCCAACACCACCACTGAGATCTGGACCTTGCCCAAGGTCCTCGGAGAGAGATACANTGCTGACAAAGATGTGGTCATCCTTACCAGTGGACATACTGGGGGTGTGGCCGAGGACATCACCTANATCCTCAAGCAGATGCGCAGAGCCATAGTGGTAGGTGAGCGGACAGANGGCGGTGCTNTGGACCTCCAGAAGCTGAGAATAGGNCAGTCCAACTTTTTCCTCACAGTTCCTGTGTCCAGGTCTCTGGGACCCCTGGGAGGAGGTGGCCAGACATGGGAAGGTAGTGGGGTGCTGCCTTGTGTGGGGACTCCTGCCGAGCAGGCCCTAGAGAAGGCCCTGGCCATCCTCACCCTGCGCCGTGCCCTGCCAGGGGTCATCCTCCGACTTCAGGAAGCCCTCCAGGACTATTACACACTGGTGGACCGAGTGCCGGGCCTGCTTCACCACCTGGCTAGCATGGACTACTCAGCCTTGGTCTCTGAGGATGACCTAGTGACAAAGCTCAACGCTGGCTTGCAAGCTGTCTCAGAGGATCCCAGGCTCCTGGTGAGAGCCACTGGACCTAAAGAAAGCTCCTGTAGGCCTGAGACTGGGCCTAATGACCCCATAGAAGCTGCTCCTGAGGTGCCCAAGGAGGAAGCTGCCCGGARGGCCCTTGTGGACTCTGTGTTTCAGGTATCCGTGTTACCGGGCAATGTGGGATACCTGCGCTTTGACAGATTTGCAGATGCCTCTGTGCTGAGGACACTGGGTCCTTATGTGTTGCGCCAGGTGTGGGAGCCCCTG
+Oryzomys_curasoae         ?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+Oryzomys_gorgasi          ?????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
+;
+ENDBLOCK;
+
+BEGIN assumptions;
+
+usertype char22 (stepmatrix) = 5
+	0 1 2 3 4
+	. 1 2 2 3
+	1 . 1 1 2
+	2 1 . 2 3
+	2 1 2 . 1
+	3 2 3 1 .
+	;
+
+usertype char36 (stepmatrix) = 4
+	0 1 2 3 
+	. 1 2 1
+	1 . 1 2
+	2 1 . 1
+	1 2 1 .
+        ;
+
+ENDBLOCK;
+
+BEGIN paup;
+set increase=auto tcomp=yes tord=right autoclose=yes;
+defaults hsearch swap=tbr addseq=random nrep=100;
+defaults pset collapse=min;
+
+	charset morpho=1-98;
+	charset irbp=99-1367;
+	ctype unord : all;																									
+	ctype ord : 1 5 7 9 15 20 26 28 30 32 34 35 37 41 44 49 56 57 61 69 72 76 84 89 94;
+	ctype char22: 22;
+	ctype char36: 36;																									
+ENDBLOCK;

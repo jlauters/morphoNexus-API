@@ -1,0 +1,25 @@
+xread
+24 15
+Archaeohyrax	000000000[0 2][0 1]00000000??000
+Prohegetotherium_sculptum	000001001210000001010011
+Prohegetotherium_schiaffinoi	0000000112111000?10??111
+"Ethegotherium_carettei"	0000?00?02??10?0?????112
+Prohegetotherium_malalhuense	0?0??101121?10???????121
+Sallatherium_altiplanense	00000001121110?00????011
+Prosotherium_garzoni	01001020020111?012100031
+Propachyrucos_smithwoodwardi	00001020020111?012100031
+Hegetotherium_mirabile	00001101[0 1]2[1 2]0100001010111
+Hemihegetotherium_achataleptum	10011101130110?0??010001
+Hemihegetotherium_trilobus	10011001[0 1]30[0 1]11000101?002
+Hegetotheriopsis_sulcatus	1000?010120?[0 1]0???????031
+Pachyrukhos_spp.	011010011101111012120[0 1][0 1]2
+Paedotherium_spp.	11101[0 1]0[1 2]0[1 2]01110012121002
+Tremacyllus_spp.	11101[0 1]021101111112121002
+;
+
+
+proc /;
+comments 0
+;
+
+

@@ -1,0 +1,217 @@
+#NEXUS
+[written Mon Dec 02 09:06:02 GFT 2013 by Mesquite  version 2.72 (build 527) at bverapc/172.16.20.215]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=15;
+	TAXLABELS
+		Archaeohyrax Prohegetotherium_sculptum Prohegetotherium_schiaffinoi Prohegetotherium_malalhuense Sallatherium_altiplanense Prosotherium_garzoni Propachyrucos_smithwoodwardi Medistylus_dorsatus Hegetotherium_mirabile Hemihegetotherium_achataleptum Hemihegetotherium_trilobus Hegetotheriopsis_sulcatus Pachyrukhos_spp. Paedotherium_spp. Tremacyllus_spp. 
+	;
+
+END;
+
+
+BEGIN CHARACTERS;
+	TITLE  Character_Matrix;
+	DIMENSIONS  NCHAR=25;
+	FORMAT DATATYPE = STANDARD GAP = - MISSING = ? SYMBOLS = "  0 1 2 3";
+	MATRIX
+	Archaeohyrax                    0000000000(0 2)(0 1)00000000??000
+	Prohegetotherium_sculptum       0000001001210000001010011
+	Prohegetotherium_schiaffinoi    000000001(0 1)2111000?10??11(1 2)
+	Prohegetotherium_malalhuense    0??0??101121?10???????121
+	Sallatherium_altiplanense       000000001121110?00????011
+	Prosotherium_garzoni            011001020020111?012100031
+	Propachyrucos_smithwoodwardi    000001020020111?012100031
+	Medistylus_dorsatus             1100-1021020???001???1??1
+	Hegetotherium_mirabile          000001101(0 1)2(1 2)0100001010111
+	Hemihegetotherium_achataleptum  100011101130110?0??010001
+	Hemihegetotherium_trilobus      100011001(0 1)30(0 1)11000101?002
+	Hegetotheriopsis_sulcatus       10000?010120?(0 1)0???????031
+	Pachyrukhos_spp.                0111-10011101111012120(0 1)(0 1)2
+	Paedotherium_spp.               1111-1(0 1)0(1 2)0(1 2)01110012121002
+	Tremacyllus_spp.                1111-1(0 1)021101111112121002
+
+;
+
+END;
+BEGIN ASSUMPTIONS;
+	TYPESET * UNTITLED   =  unord:  1 -  25;
+
+END;
+
+BEGIN MESQUITECHARMODELS;
+	ProbModelSet * UNTITLED   =  'Mk1 (est.)':  1 -  25;
+END;
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1385985962060;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 1792245920663014238;
+		endTell;
+		getEmployee #mesquite.charMatrices.ManageCharacters.ManageCharacters;
+		tell It;
+			setID 0 6011040448765596236;
+			checksumv 0 2 2711563013 null  numChars 25   short false   bits 15   states 15   sumSquaresStatesOnly 1638.0   NumFiles 1 NumMatrices 1;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 100;
+			setPopoutState 400;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 896 533;
+			setLocation 8 8;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			showTaxa #1792245920663014238 #mesquite.lists.TaxonList.TaxonList;
+			tell It;
+				setTaxa #1792245920663014238;
+				getWindow;
+				tell It;
+					newAssistant  #mesquite.lists.DefaultTaxaOrder.DefaultTaxaOrder;
+					newAssistant  #mesquite.lists.TaxonListCurrPartition.TaxonListCurrPartition;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 796 466;
+					setLocation 8 8;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+					endTell;
+				endTell;
+				showWindow;
+				getEmployee #mesquite.lists.ColorTaxon.ColorTaxon;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.lists.TaxonListAnnotPanel.TaxonListAnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+			endTell;
+		endTell;
+		getEmployee  #mesquite.charMatrices.BasicDataWindowCoord.BasicDataWindowCoord;
+		tell It;
+			showDataWindow #6011040448765596236 #mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindowMaker;
+			tell It;
+				getWindow;
+				tell It;
+					getTable;
+					tell It;
+						rowNamesWidth 164;
+					endTell;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 796 466;
+					setLocation 8 8;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+						setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					endTell;
+					setActive;
+					setTool mesquite.charMatrices.BasicDataWindowMaker.BasicDataWindow.ibeam;
+					colorCells  #mesquite.charMatrices.NoColor.NoColor;
+					colorRowNames  #mesquite.charMatrices.TaxonGroupColor.TaxonGroupColor;
+					colorColumnNames  #mesquite.charMatrices.CharGroupColor.CharGroupColor;
+					colorText  #mesquite.charMatrices.NoColor.NoColor;
+					setBackground White;
+					toggleShowNames on;
+					toggleShowTaxonNames on;
+					toggleTight off;
+					toggleThinRows off;
+					toggleShowChanges on;
+					toggleSeparateLines off;
+					toggleShowStates on;
+					toggleAutoWCharNames on;
+					toggleAutoTaxonNames off;
+					toggleShowDefaultCharNames off;
+					toggleConstrainCW on;
+					toggleBirdsEye off;
+					toggleAllowAutosize on;
+					toggleColorsPanel off;
+					toggleDiagonal on;
+					setDiagonalHeight 80;
+					toggleLinkedScrolling on;
+					toggleScrollLinkedTables off;
+				endTell;
+				showWindow;
+				getWindow;
+				tell It;
+					forceAutosize;
+				endTell;
+				getEmployee #mesquite.charMatrices.ColorCells.ColorCells;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.categ.StateNamesStrip.StateNamesStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.AnnotPanel.AnnotPanel;
+				tell It;
+					togglePanel off;
+				endTell;
+				getEmployee #mesquite.charMatrices.CharReferenceStrip.CharReferenceStrip;
+				tell It;
+					showStrip off;
+				endTell;
+				getEmployee #mesquite.charMatrices.QuickKeySelector.QuickKeySelector;
+				tell It;
+					autotabOff;
+				endTell;
+				getEmployee #mesquite.categ.SmallStateNamesEditor.SmallStateNamesEditor;
+				tell It;
+					panelOpen true;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+
+
+
+BEGIN VERIFIED_TAXA;
+Dimensions ntax=15 nchar=4;
+Prosotherium_garzoni    Prosotherium garzoni Ameghino, 1897    Exact match by canonical form    GBIF Backbone Taxonomy
+Sallatherium_altiplanense    Sallatherium altiplanense Reguero & Cerdeño, 2005    Exact match by canonical form    GBIF Backbone Taxonomy
+Hemihegetotherium_achataleptum    Hemihegetotherium achataleptum Rovereto 1914    Exact match by canonical form    Index to Organism Names
+Hegetotheriopsis_sulcatus
+Medistylus_dorsatus    Medistylus dorsatus (Ameghino 1903)    Exact match by canonical form    Index to Organism Names
+Archaeohyrax    Archaeohyrax    Exact string match    Index to Organism Names
+Pachyrukhos_spp.    Pachyrukhos Ameghino, 1885    Exact match by canonical form    Interim Register of Marine and Nonmarine Genera
+Propachyrucos_smithwoodwardi    Propachyrucos smithwoodwardi Ameghino, 1897    Exact match by canonical form    GBIF Backbone Taxonomy
+Prohegetotherium_malalhuense
+Paedotherium_spp.    Paedotherium Burmeister, 1888    Exact match by canonical form    Interim Register of Marine and Nonmarine Genera
+Prohegetotherium_sculptum    Prohegetotherium sculptum Ameghino    Exact match by canonical form    GBIF Backbone Taxonomy
+Tremacyllus_spp.    Tremacyllus Ameghino, 1891    Exact match by canonical form    Interim Register of Marine and Nonmarine Genera
+Hegetotherium_mirabile    Hegetotherium mirabile Ameghino, 1887    Exact match by canonical form    GBIF Backbone Taxonomy
+Prohegetotherium_schiaffinoi    Prohegetotherium schiaffinoi (Kraglievich, 1932)    Exact match by canonical form    GBIF Backbone Taxonomy
+Hemihegetotherium_trilobus    Hemihegetotherium trilobus Croft & Anaya, 2006    Exact match by canonical form    GBIF Backbone Taxonomy
+;
+END;
+

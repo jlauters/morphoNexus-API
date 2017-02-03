@@ -1,4 +1,4 @@
-flask-api-bootstrap
+MorphoNexus API
 ==============
 
-RESTFUL API starter script with JWT authentication and cross domain support.
+Flask API wrapped around a mediator to assist in converting non compliant matrix files and verifying taxon names
