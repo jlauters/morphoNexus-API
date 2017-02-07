@@ -40,7 +40,10 @@ class TxtHandler():
       os.rename(self.input_file, filename + ".nex")
 
       # send to correct matrix handler
+      # TODO: A little dirty, probably should 
+      # change mediator's handler param so this flows cleaner
       matrixHandler = NexusHandler( filename + ".nex" )
+      return matrixHandler.read_file()
 
     elif "xread" == self.first_line.strip():
     
@@ -72,9 +75,9 @@ class TxtHandler():
             line_parts = list(filter(None, line_parts))
 
             taxon_name = line_parts[0]
-            #taxon_chars = line_parts[1]
-            taxon_chars = line_parts[1].replace("[", "(")
-            taxon_chars = taxon_chars.replace("]", ")")
+            taxon_chars = line_parts[1]
+            #taxon_chars = line_parts[1].replace("[", "(")
+            #taxon_chars = taxon_chars.replace("]", ")")
           
             #  verify taxa
             verified_taxa = verifyTaxa(taxon_name)
@@ -110,25 +113,7 @@ class TxtHandler():
       print "matrix array"
       marr = []
       for row in matrix_arr:
-
         items = list(row)
-        open_index = []
-        idx = 0
-        for element in items:
-          if "{" == element:
-            open_index.append(idx)
-
-          idx = idx+1
-
-        reclaimed = 0
-        for oi in open_index:
-
-          oi = int( oi - reclaimed)
-          ci = int( oi + 4 )
- 
-          items[oi:ci] = [''.join(items[oi:ci])]
-          reclaimed = reclaimed + 3
-
         marr.append(items)
 
       m = numpy.matrix(marr)

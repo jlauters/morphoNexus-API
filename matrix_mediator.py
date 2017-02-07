@@ -20,6 +20,8 @@ class matrixMediator:
       if ".nex" == file_extension:
         self.matrixHandler = NexusHandler(input_file)
         output_file = self.matrixHandler.read_file()
+        print "nexus handler output: "
+        print output_file
         return output_file
 
       elif ".xlsx" == file_extension or ".xls" == file_extension:
@@ -30,6 +32,8 @@ class matrixMediator:
       elif ".txt" == file_extension:
         self.matrixHandler = TxtHandler(input_file)
         output_file = self.matrixHandler.read_file()
+        print "txt handler output: "
+        print output_file
         return output_file
 
       else:

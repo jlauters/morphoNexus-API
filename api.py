@@ -111,7 +111,15 @@ def parse_matrix():
 
     mediator  = matrixMediator( upload_file )
     output_file = mediator.detectHandler( upload_file )
-    matrix_url = request.url_root + 'uploads/' + os.path.basename(output_file)
+
+    print "output file from mediator: "
+    print output_file
+
+    basename = os.path.basename( output_file )
+    
+    print "basename: " + basename
+
+    matrix_url = request.url_root + 'uploads/' + basename
 
     resp = (("status", "ok"),
             ("msg", "File was processed!"),

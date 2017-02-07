@@ -39,7 +39,7 @@ class FlaskTestCase(unittest.TestCase):
 
   def test_parse_matrix(self):
 
-    test_file = open('./nexus/voss_2009.nex', 'r')
+    test_file = open('./nexus/Amphisbaenia_combinedmatrix.txt', 'r')
 
     print "in test parse_matrix"
     print test_file

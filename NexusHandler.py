@@ -1,3 +1,4 @@
+import re
 import codecs
 import nexus
 from nexus import NexusReader
@@ -10,6 +11,7 @@ class NexusHandler():
   ncols = 0
   nrows = 0
   custom_block = None
+  nr = None
 
   def __init__(self, input_file):
     self.input_file = input_file
@@ -19,43 +21,84 @@ class NexusHandler():
     # If we have a nexus file already, we should verify the taxa and add custom block,
     # do any syntax cleanup needed to get Mesquire to parse without error.
 
+    print "top of read_file"
+
+    taxa_nums = []
     try:
+      print "creating nexus reader ... "
       nr = NexusReader(self.input_file)
+      self.nr = nr
+
 
     except nexus.reader.NexusFormatException, e:
-      taxa_nums = []
-      parts = str(e).split('(')
-      for part in parts:
+      print "Nexus Format Exception: "
+      print e
 
-        mini_parts = part.split(')')
-        part = mini_parts[0]
+      if str(e).strip() == "Duplicate Block mrbayes":
+        # Remove duplicate block      
+        filedata = None
+        with open(self.input_file, 'r') as file: 
+          filedata = file.read()
+ 
+        mrbayes_data = re.search('(?<=begin mrbayes;)(?s)(.*)(?=end;)', filedata.lower())
 
-        if part.replace(')', '').isdigit():
-          print part.replace(')', '')
-          taxa_nums.append( int(part.replace(')','')) )
+        replace_line = "begin mrbayes;\n" + mrbayes_data.group(0) + "end;\n"
+ 
+        insensitive_replace = re.compile(re.escape('begin mrbayes;'), re.IGNORECASE)
+        insensitive_replace = insensitive_replace.sub('', replace_line) 
+
+        insensitive_replace_again = re.compile(re.escape('end;'), re.IGNORECASE)
+        insensitive_replace = insensitive_replace_again.sub('', insensitive_replace)
+
+        filedata = re.sub('(?<=Begin Mrbayes;)(?s)(.*)(?=END;)', '', filedata)
+        filedata = re.sub('Begin Mrbayes;END;', '', filedata)
+
+        filedata = filedata + "BEGIN MRBAYES;\n" + insensitive_replace + "\nEND;\n"
+
+        with open(self.input_file, 'w') as file:
+          file.write(filedata)
+      
+        print "Trying again"
+        # try again?
+        self.read_file()
+
+      else:
+        parts = str(e).split('(')
+        for part in parts:
+
+          mini_parts = part.split(')')
+          part = mini_parts[0]
+
+          if part.replace(')', '').isdigit():
+            print part.replace(')', '')
+            taxa_nums.append( int(part.replace(')','')) )
 
       
-      filedata = None
-      with open(self.input_file, 'r') as file: 
-        filedata = file.read()
+        filedata = None
+        with open(self.input_file, 'r') as file: 
+          filedata = file.read()
 
-      # TODO: dataype=mixed(type:range, type2:range2) cannot be read by mesquite but MrBayes can read/write mixed datatype matrices
-      filedata = filedata.replace("NTAX=" + str(taxa_nums[1]), "NTAX=" + str(taxa_nums[0]) )
-      filedata = filedata.replace("symbol=", "symbols=")
-      filedata = filedata.replace("inter;", "interleave;")
+        # TODO: dataype=mixed(type:range, type2:range2) cannot be read by mesquite but MrBayes can read/write mixed datatype matrices
+        filedata = filedata.replace("NTAX=" + str(taxa_nums[1]), "NTAX=" + str(taxa_nums[0]) )
+        filedata = filedata.replace("symbol=", "symbols=")
+        filedata = filedata.replace("inter;", "interleave;")
 
-      with open(self.input_file, 'w') as file:
-        file.write(filedata)
-
-      return False
+        with open(self.input_file, 'w') as file:
+          file.write(filedata)
+          file.close()
     
+    print "After Try/Catch"
 
-    self.nrows = nr.data.ntaxa
+    if self.nr is None:
+      print "nr isn't set ... "
+
+
+    self.nrows = self.nr.data.ntaxa
 
     custom_block = "\n\nBEGIN VERIFIED_TAXA;\n"
     custom_block += "Dimensions ntax=" + str(self.nrows) + " nchar=4;\n"
 
-    for tax in nr.data.taxa:
+    for tax in self.nr.data.taxa:
     
       verified_taxa = verifyTaxa(tax)
       verified_name = None
