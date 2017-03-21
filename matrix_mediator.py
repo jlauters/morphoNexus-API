@@ -10,6 +10,17 @@ class matrixMediator:
     #self.detectHandler(input_file)
     pass 
 
+  def getCounts(self, input_file):
+    counts = {"rows": 0, "cols": 0}
+    if os.path.isfile(input_file):
+      filename, file_extension = os.path.splitext(input_file)
+
+      if ".xlsx" == file_extension or ".xls" == file_extension:
+        self.matrixHandler = XlsHandler(input_file)
+        counts = self.matrixHandler.getCounts()
+
+    return counts
+
   def detectHandler(self, input_file):
   
     print "in detectHandler. checking input file"

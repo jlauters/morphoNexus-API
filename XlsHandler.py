@@ -14,6 +14,16 @@ class XlsHandler():
   def __init__(self, input_file):
     self.input_file = input_file
 
+  def getCounts(self):
+  
+    book = xlrd.open_workbook(self.input_file)
+    sh = book.sheet_by_index(0)
+   
+    self.nrows = sh.nrows
+    self.ncols = sh.ncols
+
+    return {"rows": sh.nrows , "cols": sh.ncols }
+
   def read_file(self):
 
     book = xlrd.open_workbook(self.input_file)
