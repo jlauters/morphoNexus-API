@@ -21,22 +21,21 @@ def main():
  p.add_option('--counts', '-c', default=True, action="callback", callback=do_counts, help="return row and column counts for <input_file>" )
 
  options, arguments = p.parse_args()
- print 'reading input_file %s ...' % options.input_file
  
+ # if counts flag is set, just return counts
  if hasattr(options, 'rows'):
-   print "File contained %d rows and %d columns" % (options.rows, options.cols)
+   print "rows: %d, cols: %d" % (options.rows, options.cols)
+ else:
 
+   print 'reading input_file %s ...' % options.input_file
 
- # TODO: Parse Matrix, pass optional supplied output filename
- mediator = matrixMediator( options.input_file )
- output_file = mediator.detectHandler( options.input_file )
+   mediator = matrixMediator( options.input_file )
+   output_file = mediator.detectHandler( options.input_file )
 
+   # Rename generated file to user supplied file
+   os.rename( output_file, options.output_file )
 
- # Rename generated file to user supplied file
- os.rename( output_file, options.output_file )
-
-
- print '... writing generated matrix to  %s' % options.output_file
+   print '... writing generated matrix to  %s' % options.output_file
 
 if __name__ == '__main__':
   main()
