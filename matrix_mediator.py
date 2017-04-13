@@ -2,15 +2,18 @@ import os
 from NexusHandler import NexusHandler
 from XlsHandler import XlsHandler
 from TxtHandler import TxtHandler
+from DocxHandler import DocxHandler
+from PDFHandler import PDFHandler
 
 class matrixMediator:
   matrixHandler = None
 
-  def __init__(self, input_file):
+  def __init__(self, input_file, character_file=''):
     #self.detectHandler(input_file)
     pass 
 
   def getCounts(self, input_file):
+
     counts = {"rows": 0, "cols": 0}
     if os.path.isfile(input_file):
       filename, file_extension = os.path.splitext(input_file)
@@ -21,30 +24,43 @@ class matrixMediator:
 
     return counts
 
-  def detectHandler(self, input_file):
+  def detectHandler(self, input_file, character_file=''):
   
-    print "in detectHandler. checking input file"
-    
+    character_descriptions = []
+    if character_file and os.path.isfile(character_file):
+
+      # Parse Charatcer File for column names, and state labels 
+      char_filename, char_extension = os.path.splitext(character_file) 
+      if ".docx" == char_extension:
+        self.matrixHandler = DocxHandler(character_file)
+        character_descriptions = self.matrixHandler.read_file()
+
+      if ".pdf" == char_extension:
+        self.matrixHandler = PDFHandler(character_file)
+        character_descriptions = self.matrixHandler.read_file()
+
+        print "we got character descriptions from PDF"
+
+    # Parse Matrix file and conform to nexus file structure
     if os.path.isfile(input_file):
       filename, file_extension = os.path.splitext(input_file)
 
       if ".nex" == file_extension:
-        self.matrixHandler = NexusHandler(input_file)
+        self.matrixHandler = NexusHandler(input_file, character_descriptions)
         output_file = self.matrixHandler.read_file()
-        print "nexus handler output: "
-        print output_file
+
+        print "returning nexus file"
+
         return output_file
 
       elif ".xlsx" == file_extension or ".xls" == file_extension:
-        self.matrixHandler = XlsHandler(input_file)
+        self.matrixHandler = XlsHandler(input_file, character_descriptions)
         output_file = self.matrixHandler.read_file()
         return output_file
 
       elif ".txt" == file_extension:
-        self.matrixHandler = TxtHandler(input_file)
+        self.matrixHandler = TxtHandler(input_file, character_descriptions)
         output_file = self.matrixHandler.read_file()
-        print "txt handler output: "
-        print output_file
         return output_file
 
       else:

@@ -7,12 +7,14 @@ class XlsHandler():
   """ Xls(x) File Type implementation of matrix handling needs """
 
   input_file = None
+  character_descriptions = None
   ncols = 0
   nrows = 0
   custom_block = None
 
-  def __init__(self, input_file):
+  def __init__(self, input_file, character_descriptions):
     self.input_file = input_file
+    self.character_descriptions
 
   def getCounts(self):
   
