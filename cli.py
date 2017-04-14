@@ -43,6 +43,12 @@ def main():
      mediator = matrixMediator( options.input_file )
      output_file = mediator.detectHandler( options.input_file )
        
+   print "output_file"
+   print output_file
+
+   print "options supplied output file:"
+   print options.output_file
+
    # Rename generated file to user supplied file
    os.rename( str(output_file), str(options.output_file) )
 

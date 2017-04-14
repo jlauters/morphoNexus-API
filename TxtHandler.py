@@ -1,4 +1,5 @@
 import os
+import re
 import time
 import codecs
 import numpy
@@ -19,6 +20,44 @@ class TxtHandler():
   def __init__(self, input_file, character_descriptions):
     self.input_file = input_file
     self.character_descriptions = character_descriptions
+
+  @staticmethod 
+  def read_charfile(character_file):
+
+    with open( character_file, 'r') as f:
+     lines = f.readlines()
+     f.close()
+
+    character_states_json = []
+    print "in text char file reader ..."
+
+    for state in lines:
+
+      description = re.search('(([A-Za-z,. \([0-9]).*:)', state)
+      if description:
+ 
+        number = re.search('^\d+', description.group())
+        if number:
+          description = description.group().replace( number.group(), '', 1)
+
+      state_desc = re.search(r"(?::)([^.]*.)", state)
+      if state_desc:
+      
+        #print "number: " + str(number.group())
+        #print "desc: " + str(description)
+        #print "state_desc:" + str( state_desc.group().replace(": ", "", 1) )
+
+
+        character_states_json.append({
+          "number": number.group(),
+          "description": description,
+          "state_descriptions": state_desc.group().replace(": ", "", 1)
+        })
+    
+
+    print "returning Text Character States"
+    return character_states_json
+
 
   def read_file(self):
   

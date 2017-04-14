@@ -25,9 +25,11 @@ class matrixMediator:
     return counts
 
   def detectHandler(self, input_file, character_file=''):
-  
+
     character_descriptions = []
     if character_file and os.path.isfile(character_file):
+
+      print "Charfile found"
 
       # Parse Charatcer File for column names, and state labels 
       char_filename, char_extension = os.path.splitext(character_file) 
@@ -39,18 +41,19 @@ class matrixMediator:
         self.matrixHandler = PDFHandler(character_file)
         character_descriptions = self.matrixHandler.read_file()
 
-        print "we got character descriptions from PDF"
+      if ".txt" == char_extension:
+        character_descriptions = TxtHandler.read_charfile( character_file )
 
     # Parse Matrix file and conform to nexus file structure
     if os.path.isfile(input_file):
       filename, file_extension = os.path.splitext(input_file)
 
+      print "input file type: "
+      print file_extension
+
       if ".nex" == file_extension:
         self.matrixHandler = NexusHandler(input_file, character_descriptions)
         output_file = self.matrixHandler.read_file()
-
-        print "returning nexus file"
-
         return output_file
 
       elif ".xlsx" == file_extension or ".xls" == file_extension:
@@ -66,3 +69,5 @@ class matrixMediator:
       else:
         print "unknown filetype found."
         print input_file
+    else:
+      print "input file not found"

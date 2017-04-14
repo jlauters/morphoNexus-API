@@ -67,6 +67,7 @@ class NexusHandler():
 
     has_verified = False
     has_charstate = False
+    has_charlabels = False
     try:
       print "creating nexus reader ... "
       nr = NexusReader(self.input_file)
@@ -87,6 +88,10 @@ class NexusHandler():
         # Try to reset Dimension counts
         taxa_nums = self.reset_dimensions(e)
 
+        filedata = None
+        with open(self.input_file, 'r') as file: 
+          filedata = file.read()
+
         # TODO: dataype=mixed(type:range, type2:range2) cannot be read by mesquite but MrBayes can read/write mixed datatype matrices
         filedata = filedata.replace("NTAX=" + str(taxa_nums[1]), "NTAX=" + str(taxa_nums[0]) )
         filedata = filedata.replace("symbol=", "symbols=")
@@ -102,6 +107,26 @@ class NexusHandler():
       with open(self.input_file, 'r') as file: 
         filedata = file.read()
 
+      # Check if CHARLABLES is there ( and if we can improve with text over just column numbers )
+      charlabels_data = re.search('CHARLABELS\s*[^;*]*;', filedata)
+      if charlabels_data:
+        print "charlabels data"
+        print charlabels_data.group() 
+
+        # TODO - build up better charlabels
+        # replace old block wint the new blcok
+        new_charlabels = "\nCHARLABELS\n"
+        for char in self.character_descriptions:
+          new_charlabels = new_charlabels + "    [" + str(char['number']) + "] '" + char['description'] + "'\n"
+        
+        new_charlabels = new_charlabels + "    ;\n\n"
+
+        filedata = filedata.replace(charlabels_data.group(), new_charlabels)
+        
+        with open(self.input_file, 'w') as file:
+          file.write(filedata)
+          file.close()
+
       # Check if Character State Labels is there:
       charstate = re.search('CHARSTATELABELS', filedata)
       if charstate is not None:
@@ -113,6 +138,11 @@ class NexusHandler():
         #
         # column number character name / 0 state value 1 state value etc, 
 
+        # TODO: Check if CHARLABELS block exists
+        # TODO: Check if STATELABELS block exists -- Mesquite does not recognize
+
+        # TODO: Flag for overwrite existing or keep existing?
+  
 
         print "Do CHARSTATE Block"
         charstate_labels = "\nCHARSTATELABELS\n"
@@ -122,10 +152,6 @@ class NexusHandler():
 
           for char in self.character_descriptions:
             charstate_labels = charstate_labels + str(char['number']) + " " + char['description'] + " / " + char['state_descriptions'] + "," 
-
-            print "charstate_labels: "
-            print charstate_labels
-
         else:
 
           for char in self.nr.data.characters:
@@ -137,7 +163,7 @@ class NexusHandler():
 
         # Insert before MATRIX
         filedata_parts = filedata.split('MATRIX')
-        filedata = filedata_parts[0] + charstate_labels + filedata_parts[1]
+        filedata = filedata_parts[0] + charstate_labels + "\nMATRIX\n" + filedata_parts[1]
      
         with open(self.input_file, 'w') as file:
           file.write(filedata)
